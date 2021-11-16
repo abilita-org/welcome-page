@@ -1,0 +1,71 @@
+html {
+  font-family: $primary-font-family;
+  font-size: 16px;
+  background-color: $default-background;
+  color: $default-color;
+
+  @include fromTablet {
+    font-size: 17px;
+  }
+  @include fromLaptop {
+    font-size: 18px;
+  }
+  @include fromDesktop {
+    font-size: 19px;
+  }
+  @include fromWidescreen {
+    font-size: 20px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  &::-webkit-scrollbar {
+    width: 2px;
+    background-color: $gray-darken;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-dark;
+  }
+  scrollbar-color: $gray-dark $gray-darken;
+  scrollbar-width: thin;
+
+  font-size: $default-size;
+  font-weight: $default-weight;
+  line-height: $default-line;
+  letter-spacing: $default-spacing;
+}
+
+a {
+  text-transform: none;
+}
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background-color: transparent;
+}
+input {
+  outline: none;
+  border: none;
+}
+main {
+  min-height: calc(100vh - $header-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+q {
+  margin: 0;
+}

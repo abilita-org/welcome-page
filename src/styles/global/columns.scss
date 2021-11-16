@@ -1,0 +1,22 @@
+.columns {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 2rem;
+
+  .column {
+    flex: 1 1 240px;
+    width: auto;
+    @include mobileOnly {
+      width: 100%;
+    }
+  }
+  @include fromTablet {
+    &.is-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}

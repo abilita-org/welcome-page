@@ -1,0 +1,47 @@
+.contacts {
+  padding: 4rem 0;
+  background-color: $secondary-light;
+
+  &--title {
+    font-family: $secondary-font-family;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  &--cards {
+    flex: 3 1 480px;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    display: inherit;
+    justify-content: center;
+
+  }
+  .contacts--columns {
+    justify-content: center;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    width: 100%;
+
+    &:first-child {
+      align-items: start;
+      margin-bottom: 6rem;
+    }
+
+    &:last-child {
+      color: $primary;
+    }
+  }
+
+  &--card {
+    flex: 1 0 240px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: center;
+    @include mobileOnly {
+      width: 100%;
+    }
+  }
+}
