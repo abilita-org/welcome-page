@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;700&family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+
+@import "./global/variables.scss";
+@import "./global/mediaqueries.scss";
+@import "./global/typography.scss";
+@import "./global/global.scss";
+@import "./global/columns.scss";
+
+@import "./components/container.scss";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/feature.scss";
+@import "./components/cover.scss";
+@import "./components/partner.scss";
+@import "./components/button.scss";
+@import "./components/contacts.scss";

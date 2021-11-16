@@ -1,0 +1,102 @@
+@use "sass:meta";
+
+@mixin textStyle($name, $tag, $size, $weight, $line, $spacing, $margin) {
+  .text-#{$name},
+  #{$tag} {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    letter-spacing: $spacing;
+    margin-bottom: $margin;
+  }
+}
+
+@include textStyle(
+  "title",
+  h1,
+  $title-size,
+  $title-weight,
+  $title-line,
+  $title-spacing,
+  $title-margin
+);
+
+@include textStyle(
+  "subtitle",
+  h2,
+  $subtitle-size,
+  $subtitle-weight,
+  $subtitle-line,
+  $subtitle-spacing,
+  $subtitle-margin
+);
+
+@include textStyle(
+  "heading",
+  h3,
+  $heading-size,
+  $heading-weight,
+  $heading-line,
+  $heading-spacing,
+  $heading-margin
+);
+
+@include textStyle(
+  "subheading",
+  h4,
+  $subheading-size,
+  $subheading-weight,
+  $subheading-line,
+  $subheading-spacing,
+  $subheading-margin
+);
+
+@include textStyle(
+  "notehead",
+  h5,
+  $notehead-size,
+  $notehead-weight,
+  $notehead-line,
+  $notehead-spacing,
+  $notehead-margin
+);
+
+@include textStyle(
+  "praise",
+  q,
+  $praise-size,
+  $praise-weight,
+  $praise-line,
+  $praise-spacing,
+  $praise-margin
+);
+
+@include textStyle(
+  "paragraph",
+  p,
+  $paragraph-size,
+  $paragraph-weight,
+  $paragraph-line,
+  $paragraph-spacing,
+  $paragraph-margin
+);
+
+@include textStyle(
+  "caption",
+  h6,
+  $caption-size,
+  $caption-weight,
+  $caption-line,
+  $caption-spacing,
+  $caption-margin
+);
+
+@include textStyle(
+  "message",
+  small,
+  $message-size,
+  $message-weight,
+  $message-line,
+  $message-spacing,
+  $message-margin
+);

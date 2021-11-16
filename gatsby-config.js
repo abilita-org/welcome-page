@@ -1,16 +1,14 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "viblio website",
+    siteUrl: "http://www.viblio.com",
+    title: "viblio",
   },
   plugins: [
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -19,6 +17,8 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    "gatsby-transformer-remark",
+    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -29,5 +29,6 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-plugin-sass",
   ],
-};
+}

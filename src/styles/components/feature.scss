@@ -1,0 +1,51 @@
+.feature {
+  margin: 2rem 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+
+  &--content {
+    flex: 2 0 240px;
+  }
+  &--number {
+    color: $primary;
+    font-family: $secondary-font-family;
+    font-size: 6rem;
+    font-weight: 700;
+  }
+  &--title {
+    color: $primary;
+    font-family: $secondary-font-family;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &--description {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  &--media {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    flex: 3 2 240px;
+    @include mobileOnly {
+      order: 1;
+      width: 100%;
+    }
+  }
+  &--image {
+    max-height: 240px;
+    max-width: 400px;
+    width: 100%;
+    @include mobileOnly {
+      order: 2;
+      width: 100%;
+    }
+  }
+  .is-reverse .feature--content {
+    text-align: right;
+  }
+}

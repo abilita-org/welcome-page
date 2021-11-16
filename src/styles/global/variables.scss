@@ -1,0 +1,131 @@
+// Breakpoints
+$break-mobile: 428px;
+$break-tablet: 1024px;
+$break-laptop: 1366px;
+$break-desktop: 1920px;
+
+// Colors
+$primary-darken: #942e2b;
+$primary-dark: #d40000;
+$primary: #ff0000;
+$primary-light: #df6360;
+$primary-lighten: #fe8081;
+$secondary-darken: #08282b;
+$secondary-dark: #b6cad8;
+$secondary: #d0dde6;
+$secondary-light: #e3e8ec;
+$secondary-lighten: #f0f5f9;
+$white: #fff;
+$black: #000;
+$gray-darken: #353538;
+$gray-dark: #525252;
+$gray-middle-dark: #414143;
+$gray-middle: #58585a;
+$gray-middle-light: #9a9a9c;
+$gray-light: #e0e0e1;
+$gray-lighten: #f7f7f8;
+$error-light: #f0c4c1;
+$error: #f36259;
+$error-dark: #f36259;
+$success-light: #b7e0c3;
+$success: #63ce81;
+$success-dark: #3eba61;
+$alert-light: #fce6bb;
+$alert: #f7c35e;
+$alert-dark: #f1b43d;
+$info-light: #c6e0ee;
+$info: #73bae2;
+$info-dark: #539ec9;
+
+// Default color
+$default-background: $white;
+$default-color: $gray-darken;
+
+// Typhography
+$primary-font-family: "Cormorant", serif;
+$secondary-font-family: "Nunito Sans", sans-serif;
+// Default
+$default-size: 1rem;
+$default-weight: 400;
+$default-line: normal;
+$default-spacing: normal;
+$default-margin: 0;
+// Title
+$title-size: 3rem;
+$title-weight: 900;
+$title-line: 1.1;
+$title-spacing: -0.05rem;
+$title-margin: 0.75rem;
+
+// Subtitle
+$subtitle-size: 1.75rem;
+$subtitle-weight: 700;
+$subtitle-line: 1;
+$subtitle-spacing: normal;
+$subtitle-margin: 1.5rem;
+
+// Heading
+$heading-size: 2rem;
+$heading-weight: 800;
+$heading-line: 1.1;
+$heading-spacing: -0.05rem;
+$heading-margin: 0.75rem;
+
+
+// Subheading
+$subheading-size: 1.5rem;
+$subheading-weight: 600;
+$subheading-line: normal;
+$subheading-spacing: normal;
+$subheading-margin: 1.125rem;
+
+
+// Notehead
+$notehead-size: 1.125rem;
+$notehead-weight: 700;
+$notehead-line: 1;
+$notehead-spacing: normal;
+$notehead-margin: 0.875rem;
+
+
+// Praise
+$praise-size: 1.25rem;
+$praise-weight: 600;
+$praise-line: 1.1;
+$praise-spacing: normal;
+$praise-margin: 1.125rem;
+
+
+// Paragraph
+$paragraph-size: 1.125rem;
+$paragraph-weight: 600;
+$paragraph-line: normal;
+$paragraph-spacing: normal;
+$paragraph-margin: 0.875rem;
+
+
+// Caption
+$caption-size: 0.875rem;
+$caption-weight: 400;
+$caption-line: 1.1;
+$caption-spacing: normal;
+$caption-margin: 0.5rem;
+
+
+// Message
+$message-size: 0.75rem;
+$message-weight: 300;
+$message-line: 1.1;
+$message-spacing: normal;
+$message-margin: 0.25rem;
+
+
+// Z axis
+$header-index: 50;
+$modal-index: 100;
+
+// Header variables
+$header-height: 4rem;
+
+// Icon variables
+$icon-family: "icon-basic-set";

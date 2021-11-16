@@ -1,8 +1,8 @@
 {
-  "name": "viblio-website",
+  "name": "website-template",
   "version": "1.0.0",
   "private": true,
-  "description": "viblio website",
+  "description": "website-template",
   "author": "Mirco",
   "keywords": [
     "gatsby"
@@ -12,20 +12,33 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "restart": "gatsby clean && gatsby develop"
   },
   "dependencies": {
-    "gatsby": "^4.0.2",
-    "gatsby-plugin-google-analytics": "^4.0.0",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^4.0.0",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-manifest": "^4.0.0",
+    "gatsby-plugin-mdx": "^3.0.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
-    "gatsby-plugin-sharp": "^4.0.1",
+    "gatsby-plugin-sass": "^5.1.1",
+    "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-plugin-sitemap": "^5.0.0",
     "gatsby-source-filesystem": "^4.0.0",
+    "gatsby-source-storyblok": "^3.0.1",
+    "gatsby-transformer-remark": "^5.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.43.4",
+    "storyblok-js-client": "^4.1.5",
+    "storyblok-react": "^0.1.2"
+  },
+  "devDependencies": {
+    "prettier": "2.4.1"
   }
 }
