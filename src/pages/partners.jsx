@@ -3,6 +3,8 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import Partner from "../components/partner"
 
+import "../styles/style.scss"
+
 export default function Partners() {
   return (
     <>

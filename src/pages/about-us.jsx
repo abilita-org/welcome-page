@@ -2,6 +2,9 @@ import React from "react"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import logo from "../images/logo-viblio.svg"
+
+import "../styles/style.scss"
+
 export default function About() {
   return (
     <>
