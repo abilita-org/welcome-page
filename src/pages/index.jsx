@@ -52,14 +52,16 @@ export default function index() {
       <Header />
       <main>
         <Cover />
-        {data.feartures.map((feature, i) => (
-          <Feature
-            key={i}
-            data={feature}
-            id={i + 1}
-            inverse={(i + 1) % 2 == 0}
-          />
-        ))}
+        <div id="features">
+          {data.feartures.map((feature, i) => (
+            <Feature
+              key={i}
+              data={feature}
+              id={i + 1}
+              inverse={(i + 1) % 2 == 0}
+            />
+          ))}
+        </div>
         <Partner />
         <Contacts />
       </main>

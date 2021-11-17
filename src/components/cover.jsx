@@ -9,11 +9,7 @@ export default function Cover() {
         <div className="cover--content">
           <h1 className="cover--title">
             Ciao, mi chiamo <br />
-            <img
-              className="cover--logo"
-              src={logo}
-              alt="logo viblio"
-            />
+            <img className="cover--logo" src={logo} alt="logo viblio" />
           </h1>
           <p className="cover--subtitle">
             Sono una guida per il tuo percorso di apprendimento nell’universo
@@ -24,7 +20,9 @@ export default function Cover() {
           <p className="cover--subtitle">
             Come? <br /> Seguimi e lo scoprirai.
           </p>
-          <img src={arrow} alt="arrow down" height="40px" />
+          <a href="#features" target="_self">
+            <img src={arrow} alt="arrow down" height="40px" />
+          </a>
         </div>
       </div>
     </section>

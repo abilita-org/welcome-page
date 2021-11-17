@@ -1,10 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import Button from "./button"
 
 import industry from "../images/industry.svg"
 import consumer from "../images/consumer.svg"
+import Modal from "./modal"
 
 export default function Contacts() {
+  const [modal, setModal] = useState(false)
+  const [target, setTarget] = useState("")
+
+  function showModal(t) {
+    setTarget(t)
+    setModal(true)
+  }
+  function hideModal() {
+    setTarget("")
+    setModal(false)
+  }
+
   return (
     <section id="contacts" className="contacts">
       <div className="contacts--container container">
@@ -22,7 +35,14 @@ export default function Contacts() {
             <div className="contacts--card">
               <img src={industry} alt="industry" height="120px" />
               <br />
-              <Button style="secondary" text="contatta" size="large" />
+              <Button
+                style="secondary"
+                text="contatta"
+                size="large"
+                action="modal"
+                target="business"
+                fireAction={e => showModal(e)}
+              />
               <p>
                 Scrivi ai miei learning experts, capiranno con te le necessità
                 della tua azienda.
@@ -31,7 +51,14 @@ export default function Contacts() {
             <div className="contacts--card">
               <img src={consumer} alt="industry" height="120px" />
               <br />
-              <Button style="secondary" text="iscriviti" size="large" />
+              <Button
+                style="secondary"
+                text="iscriviti"
+                size="large"
+                action="modal"
+                target="consumer"
+                fireAction={e => showModal(e)}
+              />
               <p>
                 Lascia qui la tua mail ed entra a far parte dei 1000 beta tester
                 che proveranno la mia versione consumer.
@@ -51,6 +78,7 @@ export default function Contacts() {
           </div>
         </div>
       </div>
+      <Modal target={target} showModal={modal} hideModal={() => hideModal()} />
     </section>
   )
 }

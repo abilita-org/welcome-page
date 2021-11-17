@@ -15,7 +15,7 @@ export default function Header() {
           />
         </a>
         <div className="header--action">
-          <Button style="primary" text="login" size="small" />
+          <Button style="primary" text="login" size="small" action="login"/>
         </div>
       </div>
     </header>

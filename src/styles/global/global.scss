@@ -54,6 +54,7 @@ button {
 input {
   outline: none;
   border: none;
+  box-sizing: border-box;
 }
 main {
   min-height: calc(100vh - $header-height);
