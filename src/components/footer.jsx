@@ -24,7 +24,7 @@ export default function Footer() {
                 <a href="/about-us">chi siamo</a>
               </li>
               <li>
-                <a href="/partners">partenrs</a>
+                <a href="/partners">partners</a>
               </li>
             </ul>
           </div>
