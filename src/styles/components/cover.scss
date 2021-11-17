@@ -7,6 +7,9 @@
 
   &--logo {
     max-height: 160px;
+    &-small {
+      max-height: 120px;
+    }
   }
 
   &--content {

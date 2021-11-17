@@ -10,16 +10,18 @@ export default function Button({
   disabled = false,
   fireAction = () => null,
 }) {
-  function doAction(action) {
+  function doAction(event, action) {
     switch (action) {
       case "login":
-        navigate("#")
+        window.open("https://www.apprendo.ai/login", "_blank")
         break
       case "modal":
         fireAction(target)
         break
-      case "submit": 
-        fireAction()
+      case "submit":
+        fireAction(event)
+      default:
+        break
     }
   }
 
@@ -30,7 +32,7 @@ export default function Button({
     <button
       disabled={disabled}
       className={`button ${classStyle} ${classSize}`}
-      onClick={() => doAction(action)}
+      onClick={e => doAction(e, action)}
     >
       {text}
     </button>

@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 })
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/viblio-favicon.svg",
       },
     },
     "gatsby-transformer-remark",
@@ -30,5 +30,16 @@ module.exports = {
       __key: "images",
     },
     "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        // string; add your MC list endpoint here; see instructions below
+        endpoint: process.env.MAIL_CHIMP,
+        // endpoint:
+        //   "https://viblio.us20.list-manage.com/subscribe/post?u=132f83383ff12cb307ffa8aa1&amp;id=a3aff715f3",
+        // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+        timeout: 3500,
+      },
+    },
   ],
 }

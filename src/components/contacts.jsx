@@ -4,6 +4,7 @@ import Button from "./button"
 import industry from "../images/industry.svg"
 import consumer from "../images/consumer.svg"
 import Modal from "./modal"
+import Form from "./form"
 
 export default function Contacts() {
   const [modal, setModal] = useState(false)
@@ -74,11 +75,13 @@ export default function Contacts() {
             </p>
           </div>
           <div className="contacts--cards">
-            <Button style="primary" text="login" size="large" />
+            <Button style="primary" text="login" size="large" action="login" />
           </div>
         </div>
       </div>
-      <Modal target={target} showModal={modal} hideModal={() => hideModal()} />
+      <Modal showModal={modal} hideModal={(e) => hideModal(e)}>
+        <Form target={target} closeForm={(e) => hideModal(e)} />
+      </Modal>
     </section>
   )
 }

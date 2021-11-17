@@ -10,7 +10,7 @@ export default function About() {
         <section id="cover" className="cover">
           <div className="cover--container container">
             <div className="cover--content">
-              <img className="cover--logo" src={logo} alt="logo viblio" />
+              <img className="cover--logo cover--logo-small" src={logo} alt="logo viblio" />
               <p className="cover--subtitle">
                 Qui a Viblio crediamo nella conoscenza.
                 <br />
