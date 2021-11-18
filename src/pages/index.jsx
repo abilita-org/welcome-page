@@ -33,14 +33,14 @@ const data = {
     {
       title: "scegli quello che più ti piace in totale libertà",
       description:
-        "Cerca nella mia rete di contenuti e filtra i risultati per tipo, modalità, e impegno necessario.",
+        "Podcast, video, interi corsi e molto altro: cerca nella mia rete di contenuti e filtra i risultati per tipo, modalità e impegno necessario che preferisci.",
       image: { src: book, alt: "book opened" },
     },
     {
       title:
         "crea un percorso e segui i tuoi progressi: tutto in un unico posto",
       description:
-        "Nella tua pagina personale potrai creare delle collezioni con i tuoi contenuti preferiti, monitorare il tuo percorso di apprendimento e riprendere un corso esattamente da dove lo avevi lasciato.",
+        "Nella tua pagina personale potrai creare delle collezioni con i tuoi contenuti preferiti e monitorare il tuo percorso di apprendimento.",
       image: { src: run, alt: "run between mountains" },
     },
   ],
