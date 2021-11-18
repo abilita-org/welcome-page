@@ -20,7 +20,7 @@ const data = {
       title:
         "dimmi il lavoro che fai: ti mostrerò quello che c’è da imparare per stare al passo dei migliori",
       description:
-        "Sono una guida per il tuo percorso di apprendimento nell’universo della conoscenza. Raccolgo e seleziono per te i contenuti delle migliori piattaforme digitali al mondo, rendendoti il protagonista della tua crescita.",
+        "Il mio database è in continuo aggiornamento e raccoglie le competenze chiave per più di 3000 ruoli: scegli quello che più ti si adatta e io selezionerò per te i migliori corsi e i migliori contenuti di apprendimento disponibili online.",
       image: { src: brain, alt: "brain connected" },
     },
     {
