@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 import Field from "./field"
 import Button from "./button"
+import Checkbox from "./checkbox"
 
 const data = {
   default: {
@@ -17,6 +18,11 @@ const data = {
     title: "I pionieri come te fanno la differenza",
     description: "Entra nella community dei beta tester",
   },
+  errors: {
+    invalidEmail: "L'indirizzo email non è valido.",
+    subscribed: "L'indirizzo email indicato è già registrato.",
+    default: "Si è verificato un errore.",
+  },
 }
 
 const defaultFields = {
@@ -24,6 +30,7 @@ const defaultFields = {
   surname: "",
   email: "",
   company: "",
+  acceptance: false,
 }
 
 export default function Form({ target, closeForm = () => null }) {
@@ -32,9 +39,10 @@ export default function Form({ target, closeForm = () => null }) {
   const [validForm, setValidForm] = useState(false)
   const [resultForm, setResultForm] = useState({ result: "", msg: "" })
 
-  function updateField(event) {
+  function updateField({ target }) {
     const _fields = { ...fields }
-    const { value, id } = event.target
+    const id = target.id
+    const value = target.value
     _fields[id] = value
     validateform(_fields)
     setFields(_fields)
@@ -44,10 +52,12 @@ export default function Form({ target, closeForm = () => null }) {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     const validEmail = re.test(String(_field.email).toLowerCase())
+    const validAcceptance = !!_field.acceptance
     const validName = !!_field.name.length
     const validSurname = !!_field.surname.length
 
-    const validIdentity = validEmail && validName && validSurname
+    const validIdentity =
+      validEmail && validName && validSurname && validAcceptance
     if (target === "business") {
       const validCompany = !!_field.company.length
       setValidForm(validIdentity && validCompany)
@@ -67,15 +77,24 @@ export default function Form({ target, closeForm = () => null }) {
     }
     const result = await addToMailchimp(fields.email, mailChimpFields)
     setResultForm(result)
-    console.log(result)
+  }
+
+  function recognizeErrors(error) {
+    if (error.includes("subscribed")) {
+      return data.errors.subscribed
+    } else if (error.includes("fake or invalid")) {
+      return data.errors.invalidEmail
+    } else {
+      return data.errors.default
+    }
   }
 
   function handleClose() {
     closeForm()
   }
 
-  const formTemplate = (
-    <form>
+  const formTemplate = resultForm => (
+    <form className="form">
       <div className="form--header">
         <h3 className="form--title">
           {data[!!targetForm ? targetForm : "default"].title}
@@ -84,46 +103,51 @@ export default function Form({ target, closeForm = () => null }) {
           {data[!!targetForm ? targetForm : "default"].description}
         </p>
       </div>
-
-      <div className="form--columns columns">
-        <div className="column">
-          <Field
-            id="name"
-            label="Nome"
-            placeholder="Mario"
-            value={fields.name}
-            onChange={e => updateField(e)}
-          />
+      <div className="form--body">
+        <div className="form--columns columns">
+          <div className="column">
+            <Field
+              id="name"
+              label="Nome"
+              placeholder="Mario"
+              value={fields.name}
+              onChange={e => updateField(e)}
+            />
+          </div>
+          <div className="column">
+            <Field
+              id="surname"
+              label="Cognome"
+              placeholder="Rossi"
+              value={fields.surname}
+              onChange={e => updateField(e)}
+            />
+          </div>
         </div>
-        <div className="column">
-          <Field
-            id="surname"
-            label="Cognome"
-            placeholder="Rossi"
-            value={fields.surname}
-            onChange={e => updateField(e)}
-          />
-        </div>
-      </div>
 
-      <Field
-        id="email"
-        label="Indirizzo email"
-        value={fields.email}
-        placeholder="mario.rossi@example.com"
-        onChange={e => updateField(e)}
-      />
-      {target === "business" && (
         <Field
-          id="company"
-          label="Azienda"
-          value={fields.company}
-          placeholder="ferrero"
+          id="email"
+          label="Indirizzo email"
+          value={fields.email}
+          placeholder="mario.rossi@example.com"
           onChange={e => updateField(e)}
         />
-      )}
+        {target === "business" && (
+          <Field
+            id="company"
+            label="Azienda"
+            value={fields.company}
+            placeholder="ferrero"
+            onChange={e => updateField(e)}
+          />
+        )}
+      </div>
       <div className="form--footer">
-        {!!resultForm.result === "error" && <small>{resultForm.msg}</small>}
+        <Checkbox
+          id="acceptance"
+          link="/privacy"
+          onChange={e => updateField(e)}
+        />
         <div className="form--actions">
           <Button
             style="service"
@@ -132,6 +156,11 @@ export default function Form({ target, closeForm = () => null }) {
             size="small"
             fireAction={e => handleClose(e)}
           />
+          {resultForm.result === "error" && (
+            <p className="form--error">
+              <small>{recognizeErrors(resultForm.msg)}</small>
+            </p>
+          )}
           <Button
             style="primary"
             text="Invia"
@@ -167,7 +196,8 @@ export default function Form({ target, closeForm = () => null }) {
       </div>
     </div>
   )
-
-  console.log(resultForm)
-  return resultForm.result === "success" ? successTemplate : formTemplate
+  // console.log(resultForm)
+  return resultForm.result === "success"
+    ? successTemplate
+    : formTemplate(resultForm)
 }

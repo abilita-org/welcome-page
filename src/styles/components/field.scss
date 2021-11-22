@@ -2,6 +2,10 @@
   margin-bottom: 1rem;
   font-family: $secondary-font-family;
 
+  @include mobileOnly {
+    margin-bottom: .5rem;
+  }
+
   &--label {
     display: block;
     font-size: .75rem;
@@ -18,5 +22,8 @@
     color: $gray-middle;
     background-color: $secondary-lighten;
     border-radius: 4px;
+    &::placeholder {
+      opacity: .4;
+    }
   }
 }

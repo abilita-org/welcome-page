@@ -50,7 +50,9 @@ $default-weight: 400;
 $default-line: normal;
 $default-spacing: normal;
 $default-margin: 0;
+
 // Title
+$title-family: $secondary-font-family;
 $title-size: 3rem;
 $title-weight: 900;
 $title-line: 1.1;
@@ -58,6 +60,7 @@ $title-spacing: -0.05rem;
 $title-margin: 0.75rem;
 
 // Subtitle
+$subtitle-family: $primary-font-family;
 $subtitle-size: 1.75rem;
 $subtitle-weight: 700;
 $subtitle-line: 1;
@@ -65,6 +68,7 @@ $subtitle-spacing: normal;
 $subtitle-margin: 1.5rem;
 
 // Heading
+$heading-family: $secondary-font-family;
 $heading-size: 2rem;
 $heading-weight: 800;
 $heading-line: 1.1;
@@ -73,6 +77,7 @@ $heading-margin: 0.75rem;
 
 
 // Subheading
+$subheading-family: $primary-font-family;
 $subheading-size: 1.5rem;
 $subheading-weight: 600;
 $subheading-line: normal;
@@ -81,6 +86,7 @@ $subheading-margin: 1.125rem;
 
 
 // Notehead
+$notehead-family: $secondary-font-family;
 $notehead-size: 1.125rem;
 $notehead-weight: 700;
 $notehead-line: 1;
@@ -89,14 +95,16 @@ $notehead-margin: 0.875rem;
 
 
 // Praise
-$praise-size: 1.25rem;
-$praise-weight: 600;
-$praise-line: 1.1;
-$praise-spacing: normal;
-$praise-margin: 1.125rem;
+$quote-family: $primary-font-family;
+$quote-size: 1.25rem;
+$quote-weight: 600;
+$quote-line: 1.1;
+$quote-spacing: normal;
+$quote-margin: 1.125rem;
 
 
 // Paragraph
+$paragraph-family: $primary-font-family;
 $paragraph-size: 1.125rem;
 $paragraph-weight: 600;
 $paragraph-line: normal;
@@ -105,6 +113,7 @@ $paragraph-margin: 0.875rem;
 
 
 // Caption
+$caption-family: $secondary-font-family;
 $caption-size: 0.875rem;
 $caption-weight: 400;
 $caption-line: 1.1;
@@ -113,9 +122,10 @@ $caption-margin: 0.5rem;
 
 
 // Message
+$message-family: $secondary-font-family;
 $message-size: 0.75rem;
-$message-weight: 300;
-$message-line: 1.1;
+$message-weight: 500;
+$message-line: 1;
 $message-spacing: normal;
 $message-margin: 0.25rem;
 

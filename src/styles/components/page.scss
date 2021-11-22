@@ -1,0 +1,53 @@
+.page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-family: $secondary-font-family !important;
+  & .page--container {
+    display: block;
+    @include fromLaptop {
+      max-width: 996px;
+    }
+  }
+  &--contents {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  &--content {
+    margin-bottom: 2rem;
+
+    a {
+      color: $primary;
+    }
+
+    p {
+      font-size: 0.75rem;
+      color: $gray-middle;
+      margin-bottom: 0.5rem;
+    }
+    thead th {
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: $gray-middle-dark;
+    }
+    tbody th {
+      text-align: left;
+      font-size: 0.75rem;
+      color: $gray-middle;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .list-none {
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

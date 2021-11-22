@@ -1,102 +1,119 @@
 @use "sass:meta";
 
-@mixin textStyle($name, $tag, $size, $weight, $line, $spacing, $margin) {
-  .text-#{$name},
-  #{$tag} {
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $line;
-    letter-spacing: $spacing;
-    margin-bottom: $margin;
-  }
+@mixin textStyle($family, $size, $weight, $line, $spacing, $margin) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+  letter-spacing: $spacing;
+  margin-bottom: $margin;
+}
+.text-title {
+  @include textStyle(
+    $title-family,
+    $title-size,
+    $title-weight,
+    $title-line,
+    $title-spacing,
+    $title-margin
+  );
 }
 
-@include textStyle(
-  "title",
-  h1,
-  $title-size,
-  $title-weight,
-  $title-line,
-  $title-spacing,
-  $title-margin
-);
+.tex-subtitle {
+  @include textStyle(
+    $subtitle-family,
+    $subtitle-size,
+    $subtitle-weight,
+    $subtitle-line,
+    $subtitle-spacing,
+    $subtitle-margin
+  );
+}
 
-@include textStyle(
-  "subtitle",
-  h2,
-  $subtitle-size,
-  $subtitle-weight,
-  $subtitle-line,
-  $subtitle-spacing,
-  $subtitle-margin
-);
+.text-heading {
+  @include textStyle(
+    $heading-family,
+    $heading-size,
+    $heading-weight,
+    $heading-line,
+    $heading-spacing,
+    $heading-margin
+  );
+}
 
-@include textStyle(
-  "heading",
-  h3,
-  $heading-size,
-  $heading-weight,
-  $heading-line,
-  $heading-spacing,
-  $heading-margin
-);
+.text-subheading {
+  @include textStyle(
+    $subheading-family,
+    $subheading-size,
+    $subheading-weight,
+    $subheading-line,
+    $subheading-spacing,
+    $subheading-margin
+  );
+}
 
-@include textStyle(
-  "subheading",
-  h4,
-  $subheading-size,
-  $subheading-weight,
-  $subheading-line,
-  $subheading-spacing,
-  $subheading-margin
-);
+.text-notehead {
+  @include textStyle(
+    $notehead-family,
+    $notehead-size,
+    $notehead-weight,
+    $notehead-line,
+    $notehead-spacing,
+    $notehead-margin
+  );
+}
 
-@include textStyle(
-  "notehead",
-  h5,
-  $notehead-size,
-  $notehead-weight,
-  $notehead-line,
-  $notehead-spacing,
-  $notehead-margin
-);
+.text-quote {
+  @include textStyle(
+    $quote-family,
+    $quote-size,
+    $quote-weight,
+    $quote-line,
+    $quote-spacing,
+    $quote-margin
+  );
+}
 
-@include textStyle(
-  "praise",
-  q,
-  $praise-size,
-  $praise-weight,
-  $praise-line,
-  $praise-spacing,
-  $praise-margin
-);
+.text-paragraph {
+  @include textStyle(
+    $paragraph-family,
+    $paragraph-size,
+    $paragraph-weight,
+    $paragraph-line,
+    $paragraph-spacing,
+    $paragraph-margin
+  );
+}
 
-@include textStyle(
-  "paragraph",
-  p,
-  $paragraph-size,
-  $paragraph-weight,
-  $paragraph-line,
-  $paragraph-spacing,
-  $paragraph-margin
-);
+.text-caption {
+  @include textStyle(
+    $caption-family,
+    $caption-size,
+    $caption-weight,
+    $caption-line,
+    $caption-spacing,
+    $caption-margin
+  );
+}
 
-@include textStyle(
-  "caption",
-  h6,
-  $caption-size,
-  $caption-weight,
-  $caption-line,
-  $caption-spacing,
-  $caption-margin
-);
+.text-message,
+small {
+  @include textStyle(
+    $message-family,
+    $message-size,
+    $message-weight,
+    $message-line,
+    $message-spacing,
+    $message-margin
+  );
+}
 
-@include textStyle(
-  "message",
-  small,
-  $message-size,
-  $message-weight,
-  $message-line,
-  $message-spacing,
-  $message-margin
-);
+.text-primary {
+  color: $primary;
+}
+.text-light {
+  color: $gray-middle-light;
+}
+.text-big {
+  font-size: .875rem;
+}

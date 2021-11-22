@@ -1,0 +1,22 @@
+.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: end;
+  color: $gray-middle;
+  font-family: $secondary-font-family;
+  font-size: .75rem;
+
+  & a {
+    color: inherit;
+    margin: 0 .25rem;
+  }
+
+
+  &--input {
+    margin: .5rem 1rem;
+  }
+  &--label {
+    display: inline-block;
+  }
+}
