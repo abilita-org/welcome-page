@@ -4,15 +4,19 @@ export default function Field({
   id,
   label,
   value,
+  type,
   placeholder,
   onChange = () => null,
 }) {
   return (
     <div className="field">
-      <label className="field--label">{label}</label>
+      <label htmlFor={id} className="field--label">
+        {label}
+      </label>
       <input
         className="field--input"
         id={id}
+        name={id}
         value={value}
         placeholder={placeholder}
         type="text"

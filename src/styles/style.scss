@@ -7,16 +7,21 @@
 @import "./global/global.scss";
 @import "./global/columns.scss";
 
-@import "./componentS/page.scss";
+@import "./components/page.scss";
 @import "./components/container.scss";
 @import "./components/header.scss";
 @import "./components/footer.scss";
-@import "./components/feature.scss";
-@import "./components/cover.scss";
-@import "./components/partner.scss";
+
+@import "./sections/feature.scss";
+@import "./sections/cover.scss";
+@import "./sections/partner.scss";
+@import "./sections/clients.scss";
+
 @import "./components/button.scss";
-@import "./components/contacts.scss";
 @import "./components/modal.scss";
 @import "./components/field.scss";
-@import "./components/form.scss";
 @import "./components/checkbox.scss";
+
+@import "./components/form.scss";
+
+@import "./pages/contacts.scss";

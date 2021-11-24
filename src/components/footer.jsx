@@ -30,11 +30,11 @@ export default function Footer() {
               </small>
             </p>
           </div>
-          {menus.map(menu => (
-            <div className="column footer--menu">
+          {menus.map((menu, i) => (
+            <div key={i} className="column footer--menu">
               <ul>
-                {menu.map(link => (
-                  <li>
+                {menu.map((link, i) => (
+                  <li key={i}>
                     <a href={link.url}>{link.page}</a>
                   </li>
                 ))}

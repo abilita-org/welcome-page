@@ -1,8 +1,8 @@
 import React from "react"
 import logo from "../images/logo-viblio.svg"
-import arrow from "../images/arrow-down.svg"
+import dart from "../images/dart-down.svg"
 
-export default function Cover() {
+export default function SectionCover() {
   return (
     <section id="cover" className="cover">
       <div className="cover--container container">
@@ -21,7 +21,7 @@ export default function Cover() {
             Come? <br /> Seguimi e lo scoprirai.
           </p>
           <a href="#features" target="_self">
-            <img src={arrow} alt="arrow down" height="40px" />
+            <img src={dart} alt="dart down" height="40px" />
           </a>
         </div>
       </div>

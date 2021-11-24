@@ -1,10 +1,5 @@
 .form,
 .success {
-  @include mobileOnly {
-    max-height: 90vh;
-    overflow-y: scroll;
-  }
-
   &--header {
     margin-bottom: 1.5rem;
     @include mobileOnly {
@@ -24,7 +19,7 @@
   }
 
   &--description {
-    line-height: 1 !important;
+    line-height: 1;
     font-size: 1.125rem;
     color: $gray-middle;
     @include mobileOnly {
@@ -57,5 +52,12 @@
       padding-top: 0.5rem;
       align-items: stretch;
     }
+  }
+}
+
+#clients_form {
+  @include mobileOnly {
+    max-height: 90vh;
+    overflow-y: scroll;
   }
 }

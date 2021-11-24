@@ -1,0 +1,78 @@
+.contacts {
+  &--cover {
+    background-color: $gray-middle-dark;
+    min-height: calc(100vh - $header-height);
+    @include mobileOnly {
+      padding: 3rem 0;
+    }
+  }
+
+  &--container {
+    min-height: inherit;
+  }
+
+  &--logo {
+    max-width: 10rem;
+    @include mobileOnly {
+      max-width: 6rem;
+    }
+  }
+
+  &--wrapper > .column {
+    
+    @include fromLaptop {
+      padding: 4rem;
+    }
+  }
+
+  &--wrapper__logo.column {
+    text-align: center;
+    flex-basis: 160px;
+  }
+
+  &--wrapper__content.column {
+    font-family: $secondary-font-family;
+    color: $white;
+    flex-grow: 0;
+    flex-basis: auto;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 0.75rem;
+        display: flex;
+        column-gap: 1rem;
+        @include mobileOnly {
+          flex-direction: column;
+          row-gap: 0.25rem;
+        }
+        label {
+          display: inline-block;
+          font-size: 0.75rem;
+          flex: none;
+          min-width: 8rem;
+          justify-self: end;
+          opacity: 0.8;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &--form {
+    padding: 3rem 0;
+    .form {
+      width: 100%;
+    }
+
+    .form--actions {
+      justify-content: end;
+    }
+    .success--description {
+      line-height: normal;
+    }
+  }
+}

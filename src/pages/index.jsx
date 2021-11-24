@@ -7,10 +7,10 @@ import run from "../images/mountain-run.svg"
 
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Cover from "../components/cover"
-import Feature from "../components/feature"
-import Partner from "../components/partner"
-import Contacts from "../components/contacts"
+import SectionCover from "../components/section_cover"
+import SectionFeature from "../components/section_feature"
+import SectionPartner from "../components/section_partner"
+import SectionClients from "../components/section_clients"
 
 import "../styles/style.scss"
 
@@ -51,10 +51,10 @@ export default function index() {
     <>
       <Header />
       <main>
-        <Cover />
+        <SectionCover />
         <div id="features">
           {data.feartures.map((feature, i) => (
-            <Feature
+            <SectionFeature
               key={i}
               data={feature}
               id={i + 1}
@@ -62,8 +62,8 @@ export default function index() {
             />
           ))}
         </div>
-        <Partner />
-        <Contacts />
+        <SectionPartner />
+        <SectionClients />
       </main>
       <Footer />
     </>

@@ -18,9 +18,8 @@ export default function Button({
       case "modal":
         fireAction(target)
         break
-      case "submit":
-        fireAction(event)
       default:
+        fireAction(event)
         break
     }
   }

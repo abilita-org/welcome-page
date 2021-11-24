@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Feature({ id, inverse, data }) {
+export default function SectionFeature({ id, inverse, data }) {
   const { title, description, image } = data
   return (
     <section id={`feature_${id}`} className="feature">

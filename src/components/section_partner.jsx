@@ -9,7 +9,7 @@ import udacity from "../images/logo-udacity.svg"
 import ted from "../images/logo-ted.svg"
 import udemy from "../images/logo-udemy.svg"
 
-export default function Partner() {
+export default function SectionPartner() {
   return (
     <section id="partners" className="partners">
       <div className="partners--container container">

@@ -1,7 +1,7 @@
 import React from "react"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import Partner from "../components/partner"
+import SectionPartner from "../components/section_partner"
 
 import "../styles/style.scss"
 
@@ -10,7 +10,7 @@ export default function Partners() {
     <>
       <Header />
       <main>
-        <Partner />
+        <SectionPartner />
         <section className="partners">
           <div className="partners--container container">
             <div className="partners--content">

@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
-import Field from "./field"
-import Button from "./button"
-import Checkbox from "./checkbox"
+import Field from "../components/field"
+import Button from "../components/button"
+import Checkbox from "../components/checkbox"
 
 const data = {
   default: {
@@ -33,7 +33,7 @@ const defaultFields = {
   acceptance: false,
 }
 
-export default function Form({ target, closeForm = () => null }) {
+export default function FormClients({id, target, closeForm = () => null }) {
   const [targetForm] = useState(target)
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
@@ -94,7 +94,7 @@ export default function Form({ target, closeForm = () => null }) {
   }
 
   const formTemplate = resultForm => (
-    <form className="form">
+    <form id={id} className="form">
       <div className="form--header">
         <h3 className="form--title">
           {data[!!targetForm ? targetForm : "default"].title}

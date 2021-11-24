@@ -45,16 +45,31 @@ body {
 a {
   text-transform: none;
 }
-button {
-  border: none;
-  outline: none;
-  font-family: inherit;
-  background-color: transparent;
-}
-input {
+select,
+button,
+input,
+textarea {
   outline: none;
   border: none;
   box-sizing: border-box;
+  font-family: inherit;
+}
+button {
+  background-color: transparent;
+}
+input::-ms-expand {
+  display: none;
+}
+textarea {
+  resize: vertical;
+  min-height: 3rem;
+}
+a,
+button,
+select,
+input,
+textarea {
+  cursor: pointer;
 }
 main {
   min-height: calc(100vh - $header-height);
