@@ -31,7 +31,6 @@ export default function Button({
   return (
     <button
       disabled={disabled}
-      type={action === "submit" ? "submit" : "button"}
       className={`button ${classStyle} ${classSize}`}
       onClick={e => doAction(e, action)}
     >

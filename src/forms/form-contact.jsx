@@ -87,7 +87,7 @@ export default function FormContact({ id }) {
     event.preventDefault()
   }
 
-  function handleClose(event) {
+  function handleClose() {
     setFields(defaultFields)
     setIsSent(false)
   }
@@ -97,7 +97,6 @@ export default function FormContact({ id }) {
       id={id}
       name={formName}
       className="form"
-      onSubmit={e => handleSubmit(e)}
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
@@ -160,9 +159,9 @@ export default function FormContact({ id }) {
           <Button
             style="primary"
             text="Invia"
-            action="submit"
-            disabled={!validForm}
+            action="event"
             fireAction={e => handleSubmit(e)}
+            disabled={!validForm}
           />
         </div>
       </div>
@@ -192,7 +191,7 @@ export default function FormContact({ id }) {
           <Button
             style="primary"
             text="Continua la navigazione"
-            action="submit"
+            action="event"
             fireAction={e => handleClose(e)}
           />
         </div>
