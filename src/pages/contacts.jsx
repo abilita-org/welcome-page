@@ -3,6 +3,8 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import FormContact from "../forms/form-contact"
 
+import "../styles/style.scss"
+
 import viblioBrand from "../images/viblio-brand.svg"
 
 export default function Contact() {
