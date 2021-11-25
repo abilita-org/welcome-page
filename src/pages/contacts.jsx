@@ -55,11 +55,11 @@ export default function Contact() {
             </div>
           </div>
         </section>
-        <section className="contacts--form">
+        {/* <section className="contacts--form">
           <div className="contacts--container container">
             <FormContact id="contact_form" />
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>
