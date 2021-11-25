@@ -9,7 +9,7 @@ const menus = [
   [
     { page: "chi siamo", url: "/about" },
     { page: "partners", url: "/partners" },
-    // { page: "contatti", url: "/contact" },
+    { page: "contatti", url: "/contacts" },
   ],
   [
     { page: "Privacy policy", url: "/privacy" },

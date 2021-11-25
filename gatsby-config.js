@@ -8,6 +8,7 @@ module.exports = {
     title: "viblio",
   },
   plugins: [
+    "gatsby-plugin-use-query-params",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",

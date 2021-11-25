@@ -164,7 +164,7 @@ export default function FormClients({id, target, closeForm = () => null }) {
           <Button
             style="primary"
             text="Invia"
-            action="submit"
+            action="event"
             fireAction={e => handleSubmit(e)}
             disabled={!validForm}
           />

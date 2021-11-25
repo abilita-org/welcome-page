@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import { useQueryParam, StringParam } from "use-query-params"
+
 import Field from "../components/field"
 import Select from "../components/select"
 import TextArea from "../components/text_area"
@@ -7,12 +9,9 @@ import Button from "../components/button"
 
 const data = {
   form: {
-    title: "Titolo della from",
-    description: "Descrizione della form",
-  },
-  errors: {
-    invalidEmail: "L'indirizzo email non è valido.",
-    default: "Si è verificato un errore.",
+    title: "Mettiti in contatto con noi",
+    description:
+      "Se sei interessato alla nostra piattaforma, hai segnalazioni da farci o più semplicemente hai bisogno di assistenza, indica la tua richiesta e specifica a cosa sei interessato.",
   },
   reasons: [
     { text: "Richiesta di informazioni", value: "info" },
@@ -25,7 +24,7 @@ const data = {
 const defaultFields = {
   name: "",
   surname: "",
-  email: "",
+  email: null,
   reason: "info",
   message: "",
   acceptance: false,
@@ -40,10 +39,17 @@ const encode = data => {
 }
 
 export default function FormContact({ id }) {
+  const userEmail = useQueryParam("email", StringParam)
+
+  if (defaultFields.email === null) {
+    defaultFields.email = !!userEmail[0] ? userEmail[0] : ""
+  }
+
   const [isSent, setIsSent] = useState(false)
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
-  const [error, setError] = useState(null)
+
+  console.log(fields.email)
 
   function updateField({ target }) {
     const _fields = { ...fields }
@@ -79,7 +85,6 @@ export default function FormContact({ id }) {
       .catch(error => alert(error))
 
     event.preventDefault()
-    debugger
   }
 
   function handleClose(event) {
@@ -88,8 +93,14 @@ export default function FormContact({ id }) {
   }
 
   const formTemplate = (
-    <form id={id} name={formName} className="form" data-netlify="true">
-      <input type="hidden" name="form-name" value={formName} />
+    <form
+      id={id}
+      name={formName}
+      className="form"
+      onSubmit={e => handleSubmit(e)}
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
       <div className="form--header">
         <h3 className="form--title">{data.form.title}</h3>
         <p className="form--description">{data.form.description}</p>

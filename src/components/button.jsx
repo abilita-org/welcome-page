@@ -1,5 +1,4 @@
 import React from "react"
-import { navigate } from "gatsby"
 
 export default function Button({
   target,
@@ -18,9 +17,11 @@ export default function Button({
       case "modal":
         fireAction(target)
         break
-      default:
+      case "event":
         fireAction(event)
         break
+      default:
+        console.log(event)
     }
   }
 
@@ -30,6 +31,7 @@ export default function Button({
   return (
     <button
       disabled={disabled}
+      type={action === "submit" ? "submit" : "button"}
       className={`button ${classStyle} ${classSize}`}
       onClick={e => doAction(e, action)}
     >
