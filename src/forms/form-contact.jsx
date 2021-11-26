@@ -49,8 +49,6 @@ export default function FormContact({ id }) {
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
 
-  console.log(fields.email)
-
   function updateField({ target }) {
     const _fields = { ...fields }
     const id = target.id

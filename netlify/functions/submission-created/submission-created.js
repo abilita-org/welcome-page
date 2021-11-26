@@ -8,57 +8,73 @@ const handler = async event => {
   try {
     const { name, surname, email, reason, message } = JSON.parse(event.body)
       .payload.data
+    const fullName = `${name} ${surname}`
+    const senderEmail = process.env.SENDER_EMAIL
 
-    console.log(
-      `name: ${name}, surname: ${surname}, email: ${email}, reason: ${reason}, message: ${message}`
-    )
-
-    let subject, htmlMessage
+    // Set email variables
+    const contact = {}
     switch (reason) {
       case "info":
-        subject = "Richiesta di informazioni"
-        htmlMessage = "per ricevere le informazioni richieste"
+        contact.subject = "Richiesta di informazioni"
+        contact.message = "per ricevere le informazioni richieste"
         break
       case "demo":
-        subject = "Pianificazione demo"
-        htmlMessage = "per organizzare una demo illustrativa"
+        contact.subject = "Pianificazione demo"
+        contact.message = "per organizzare una demo illustrativa"
         break
       case "bug":
-        subject = "Segnalazione di un malfunzionamento"
-        htmlMessage =
+        contact.subject = "Segnalazione di un malfunzionamento"
+        contact.message =
           "per risolvere l'eventuale problema e darle supporto per procedere nell'utilizzo del nostro servizio"
       default:
-        subject = "Richiesta di contatto"
-        htmlMessage = "dal nostro team"
+        contact.subject = "Richiesta di contatto"
+        contact.message = "dal nostro team"
         break
     }
 
-    sendGridMail.setApiKey(process.env.SENDGRID_API_KEY)
-    const html = `
-      <div> 
-        Salve <strong>${name} ${surname}</strong>,
-        <br>
+    // Configure client email
+    const clientTemplate = `
+      <div>
+        Salve <strong>${fullName}</strong>,<br>
         abbiamo ricevuto la sua ${
           reason === "bug" ? "segnalazione" : "richiesta"
-        }.
-        <br><br>
-        Verrà ricontattato il prima possibile ${htmlMessage}.
-        <br><br>
-        Nel ringraziarla per il suo interesse,
-        <br>
-        le porgiamo cordiali saluti.
-        <br><br>
+        }.<br><br>
+        Verrà ricontattato il prima possibile ${contact.message}.<br><br>
+        Nel ringraziarla per il suo interesse,<br>
+        le porgiamo cordiali saluti.<br><br>
         Lo staff di <strong>Viblio</strong>
       </div>
     `
-
-    const mail = {
-      from: process.env.SENDER_EMAIL,
+    const mailToClient = {
+      from: senderEmail,
       to: email,
-      subject: `Viblio Supporto - ${subject}`,
-      html,
+      subject: `Viblio Supporto - ${contact.subject}`,
+      html: clientTemplate,
     }
-    await sendGridMail.send(mail)
+    // console.log(mailToClient)
+
+    // Configure support mail
+    const supportTemplate = `
+      <div>
+        ${contact.subject} da parte di <strong>${fullName}</strong>.<br><br>
+        Indirizzo: <strong>${email}</strong><br><br>
+        Messaggio:<br>
+        <strong>${message}</strong>
+      </div>
+    `
+    const mailToSupport = {
+      from: senderEmail,
+      to: senderEmail,
+      subject: `Richiesta supporto - ${reason} - ${fullName}`,
+      html: supportTemplate,
+    }
+    // console.log(mailToSupport)
+
+    // Send email
+    sendGridMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+    await sendGridMail.send(mailToClient)
+    await sendGridMail.send(mailToSupport)
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Email sent" }),
