@@ -1,5 +1,8 @@
 import React from "react"
 
+const loginLink =
+  "https://auth.viblio.com/realms/viblioprod/protocol/openid-connect/auth?client_id=www-prod&redirect_uri=https%3A%2F%2Fwww.apprendo.ai%2F&response_mode=fragment&response_type=code&scope=openid"
+
 export default function Button({
   target,
   style,
@@ -12,7 +15,7 @@ export default function Button({
   function doAction(event, action) {
     switch (action) {
       case "login":
-        window.open("https://www.apprendo.ai/login", "_blank")
+        window.open(loginLink, "_blank")
         break
       case "modal":
         fireAction(target)
