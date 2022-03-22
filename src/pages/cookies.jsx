@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
@@ -7,6 +8,7 @@ import "../styles/style.scss"
 export default function CookiePolicy() {
   return (
     <>
+    <Seo />
       <Header />
       <main className="page">
         <div className="page--container container">

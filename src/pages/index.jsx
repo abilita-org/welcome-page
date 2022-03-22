@@ -5,6 +5,7 @@ import face from "../images/face-detected.svg"
 import book from "../images/book-opened.svg"
 import run from "../images/mountain-run.svg"
 
+import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import SectionCover from "../components/section_cover"
@@ -49,6 +50,7 @@ const data = {
 export default function index() {
   return (
     <>
+      <Seo />
       <Header />
       <main>
         <SectionCover />

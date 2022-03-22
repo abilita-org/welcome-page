@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import SectionPartner from "../components/section_partner"
@@ -8,6 +9,7 @@ import "../styles/style.scss"
 export default function Partners() {
   return (
     <>
+    <Seo />
       <Header />
       <main>
         <SectionPartner />

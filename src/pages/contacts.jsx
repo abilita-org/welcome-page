@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import FormContact from "../forms/form-contact"
@@ -10,6 +11,7 @@ import viblioBrand from "../images/viblio-brand.svg"
 export default function Contact() {
   return (
     <>
+      <Seo />
       <Header />
       <main>
         <section className="contacts--cover">

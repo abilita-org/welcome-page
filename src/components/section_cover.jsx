@@ -8,7 +8,8 @@ export default function SectionCover() {
       <div className="cover--container container">
         <div className="cover--content">
           <h1 className="cover--title">
-            Ciao, mi chiamo <br />
+            Ciao, mi chiamo <span style={{ display: "none" }}>Viblio</span>
+            <br />
             <img className="cover--logo" src={logo} alt="logo viblio" />
           </h1>
           <p className="cover--subtitle">

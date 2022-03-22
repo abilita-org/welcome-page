@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import logo from "../images/logo-viblio.svg"
@@ -8,12 +9,17 @@ import "../styles/style.scss"
 export default function About() {
   return (
     <>
+      <Seo />
       <Header />
       <main>
         <section id="cover" className="cover">
           <div className="cover--container container">
             <div className="cover--content">
-              <img className="cover--logo cover--logo-small" src={logo} alt="logo viblio" />
+              <img
+                className="cover--logo cover--logo-small"
+                src={logo}
+                alt="logo viblio"
+              />
               <p className="cover--subtitle">
                 Qui a Viblio crediamo nella conoscenza.
                 <br />

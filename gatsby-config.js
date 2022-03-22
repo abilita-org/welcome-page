@@ -5,7 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "http://www.viblio.com",
-    title: "viblio",
+    title: "Ciao mi chiamo Viblio",
+    description: "Sono una guida per il tuo percorso di apprendimento nell’universo della conoscenza."
   },
   plugins: [
     "gatsby-plugin-use-query-params",
