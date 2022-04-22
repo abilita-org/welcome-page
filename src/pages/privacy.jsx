@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
                 Il titolare del trattamento è la società
                 <strong> Apprendo S.r.l.</strong> con sede in 33100 Udine, via
                 Marinoni n. 12 (P.I. 03029040304). Il Titolare è contattabile
-                all’indirizzo email: <strong>support@apprendo.ai</strong>.
+                all’indirizzo email: <strong>info@viblio.com</strong>.
               </p>
             </section>
             <section className="page--content">
@@ -270,7 +270,7 @@ export default function PrivacyPolicy() {
                 applicabile. L’elenco aggiornato dei responsabili del
                 trattamento è disponibile presso le sedi del Titolare e verrà
                 fornito a richiesta dell’interessato scrivendo al seguente
-                indirizzo e-mail: <strong>support@apprendo.ai</strong>.
+                indirizzo e-mail: <strong>info@viblio.com</strong>.
               </p>
             </section>
             <section className="page--content">
@@ -315,7 +315,7 @@ export default function PrivacyPolicy() {
               <p>
                 Tali diritti possono essere esercitati scrivendo a mezzo posta
                 ai recapiti sopra indicati oppure tramite posta elettronica al
-                seguente indirizzo e-mail: <strong>support@apprendo.ai</strong>.
+                seguente indirizzo e-mail: <strong>info@viblio.com</strong>.
               </p>
             </section>
           </div>

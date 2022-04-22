@@ -17,7 +17,7 @@ export default function CookiePolicy() {
           <p>
             Apprendo S.r.l. con sede in Udine, via Marinoni n. 12. Il Titolare
             può essere contattato all’indirizzo email{" "}
-            <strong>support@apprendo.ai</strong>
+            <strong>info@viblio.com</strong>
           </p>
           <div className="page--contents">
             <section className="page--content">

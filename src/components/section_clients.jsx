@@ -62,7 +62,7 @@ export default function SectionClients() {
               />
               <p>
                 Lascia qui la tua mail ed entra a far parte dei 1000 beta tester
-                che proveranno la mia versione consumer.
+                che proveranno la mia versione flexible & light.
               </p>
             </div>
           </div>
