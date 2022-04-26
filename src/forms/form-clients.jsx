@@ -30,10 +30,11 @@ const defaultFields = {
   surname: "",
   email: "",
   company: "",
+  role: "",
   acceptance: false,
 }
 
-export default function FormClients({id, target, closeForm = () => null }) {
+export default function FormClients({ id, target, closeForm = () => null }) {
   const [targetForm] = useState(target)
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
@@ -62,7 +63,8 @@ export default function FormClients({id, target, closeForm = () => null }) {
       const validCompany = !!_field.company.length
       setValidForm(validIdentity && validCompany)
     } else {
-      setValidForm(validIdentity)
+      const validRole = !!_field.role.length
+      setValidForm(validIdentity && validRole)
     }
   }
 
@@ -74,6 +76,9 @@ export default function FormClients({id, target, closeForm = () => null }) {
     }
     if (targetForm === "business") {
       mailChimpFields.COMPANY = fields.company
+    }
+    if (targetForm === "consumer") {
+      mailChimpFields.ROLE = fields.role
     }
     const result = await addToMailchimp(fields.email, mailChimpFields)
     setResultForm(result)
@@ -132,6 +137,15 @@ export default function FormClients({id, target, closeForm = () => null }) {
           placeholder="mario.rossi@example.com"
           onChange={e => updateField(e)}
         />
+        {target === "consumer" && (
+          <Field
+            id="role"
+            label="Il tuo ruolo professionale"
+            value={fields.role}
+            placeholder="Responsabile marketing"
+            onChange={e => updateField(e)}
+          />
+        )}
         {target === "business" && (
           <Field
             id="company"

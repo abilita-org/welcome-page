@@ -19,7 +19,6 @@ const Seo = ({ lang, meta, title, description }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = title || site.siteMetadata?.title
-  console.log(defaultTitle)
 
   return (
     <Helmet
@@ -68,6 +67,7 @@ const Seo = ({ lang, meta, title, description }) => {
 Seo.defaultProps = {
   lang: `it`,
   meta: [],
+  title: ``,
   description: ``,
 }
 
