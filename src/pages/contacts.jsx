@@ -29,8 +29,8 @@ export default function Contact() {
                 <h2 className="text-heading">Apprendo S.r.l.</h2>
                 <ul>
                   <li>
-                    <label>Telefono</label>
-                    <span>+39 0432512884</span>
+                    <label>Email</label>
+                    <span>info@viblio.com</span>
                   </li>
                   <li>
                     <label>Settore</label>
