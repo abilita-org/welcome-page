@@ -3,8 +3,8 @@ import React from "react"
 export default function Field({
   id,
   label,
+  info,
   value,
-  type,
   placeholder,
   onChange = () => null,
 }) {
@@ -13,6 +13,7 @@ export default function Field({
       <label htmlFor={id} className="field--label">
         {label}
       </label>
+      {!!info && <p className="field--info">{info}</p>}
       <input
         className="field--input"
         id={id}
