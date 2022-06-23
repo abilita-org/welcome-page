@@ -15,8 +15,8 @@ const data = {
     description: "Entra in contatto con i miei learning experts",
   },
   consumer: {
-    title: "I pionieri come te fanno la differenza",
-    description: "Entra nella community dei beta tester",
+    title: "Le persone come te fanno la differenza",
+    description: "Entra nella community di Viblio",
   },
   errors: {
     invalidEmail: "L'indirizzo email non è valido.",
