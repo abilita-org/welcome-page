@@ -15,8 +15,8 @@ const data = {
     description: "Entra in contatto con i miei learning experts",
   },
   consumer: {
-    title: "I pionieri come te fanno la differenza",
-    description: "Entra nella community dei beta tester",
+    title: "Le persone come te fanno la differenza",
+    description: "Entra nella community di Viblio",
   },
   errors: {
     invalidEmail: "L'indirizzo email non è valido.",
@@ -31,6 +31,7 @@ const defaultFields = {
   email: "",
   company: "",
   role: "",
+  skill: "",
   acceptance: false,
 }
 
@@ -79,6 +80,7 @@ export default function FormClients({ id, target, closeForm = () => null }) {
     }
     if (targetForm === "consumer") {
       mailChimpFields.ROLE = fields.role
+      mailChimpFields.SKILL = fields.skill
     }
     const result = await addToMailchimp(fields.email, mailChimpFields)
     setResultForm(result)
@@ -138,13 +140,23 @@ export default function FormClients({ id, target, closeForm = () => null }) {
           onChange={e => updateField(e)}
         />
         {target === "consumer" && (
-          <Field
-            id="role"
-            label="Il tuo ruolo professionale"
-            value={fields.role}
-            placeholder="Responsabile marketing"
-            onChange={e => updateField(e)}
-          />
+          <>
+            <Field
+              id="role"
+              label="Il tuo ruolo professionale"
+              value={fields.role}
+              placeholder="Responsabile marketing"
+              onChange={e => updateField(e)}
+            />
+            <Field
+              id="skill"
+              label="Indica le competenze aggiuntive che vuoi esplorare"
+              info="Inserisci una o più parole chiave che la descrivono"
+              value={fields.skill}
+              placeholder="Contenuti social media"
+              onChange={e => updateField(e)}
+            />
+          </>
         )}
         {target === "business" && (
           <Field

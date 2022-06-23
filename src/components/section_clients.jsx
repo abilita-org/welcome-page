@@ -61,8 +61,8 @@ export default function SectionClients() {
                 fireAction={e => showModal(e)}
               />
               <p>
-                Lascia qui la tua mail ed entra a far parte dei 1000 beta tester
-                che proveranno la mia versione flexible & light.
+                Lascia qui la tua email, il tuo ruolo ed un argomento
+                d’interesse per richiedere una demo gratuita.
               </p>
             </div>
           </div>
@@ -79,8 +79,12 @@ export default function SectionClients() {
           </div>
         </div>
       </div>
-      <Modal showModal={modal} hideModal={(e) => hideModal(e)}>
-        <FormClients id="clients_form" target={target} closeForm={(e) => hideModal(e)} />
+      <Modal showModal={modal} hideModal={e => hideModal(e)}>
+        <FormClients
+          id="clients_form"
+          target={target}
+          closeForm={e => hideModal(e)}
+        />
       </Modal>
     </section>
   )

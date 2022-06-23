@@ -13,7 +13,12 @@
     font-size: 0.75rem;
     font-weight: 500;
     color: $gray-middle-light;
-    margin-bottom: 0.5rem;
+  }
+  &--info {
+    font-size: 0.65rem;
+    font-weight: 300;
+    color: $gray-middle-lighten;
+    margin-bottom: 0.25rem;
   }
   &--input {
     display: block;
@@ -24,6 +29,7 @@
     color: $gray-middle;
     background-color: $secondary-lighten;
     border-radius: 4px;
+    margin-top: 0.5rem;
     &::placeholder {
       opacity: 0.4;
     }
