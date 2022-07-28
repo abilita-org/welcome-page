@@ -32,13 +32,7 @@ const defaultFields = {
 
 const formName = "viblio-contact-form"
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
-export default function FormContact({ id }) {
+export default function FormContact({ id, closeForm = () => null }) {
   const userEmail = useQueryParam("email", StringParam)
 
   if (defaultFields.email === null) {
@@ -73,31 +67,58 @@ export default function FormContact({ id }) {
     setValidForm(validInputs && validAcceptance)
   }
 
+  // function handleSubmit(event) {
+  //   const url = "https://viblio.zendesk.com/api/v2/tickets.json"
+  //   const token =
+  //     "ZGF5YW5hLm1lamlhc0B2aWJsaW8uY29tL3Rva2VuOnRZelF2UkhKQzNsQ3B5dFNDb3F6ZjNEbUd6MG1TazFaSWZaMzc5cmY="
+  //   const ticket = JSON.stringify({
+  //     ticket: {
+  //       subject: "Testing api",
+  //       comment: { body: "Test api from the frontend" },
+  //     },
+  //   })
+  //   const options = {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: `Basic ${token}`,
+  //     },
+  //     body: ticket,
+  //   }
+
+  //   fetch(url, options)
+  //     .then(response => response.json())
+  //     .then(data => console.log(data))
+  //   event.preventDefault()
+  // }
+
   function handleSubmit(event) {
-    fetch("/", {
+    const ticket = JSON.stringify({
+      ticket: {
+        subject: "Testing function api",
+        comment: { body: "Test api from the netlify function" },
+      },
+    })
+    fetch("/.netlify/functions/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": formName, ...fields }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: ticket,
     })
       .then(() => setIsSent(true))
       .catch(error => alert(error))
-
     event.preventDefault()
   }
 
   function handleClose() {
     setFields(defaultFields)
     setIsSent(false)
+    closeForm()
   }
 
   const formTemplate = (
-    <form
-      id={id}
-      name={formName}
-      className="form"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-    >
+    <form id={id} name={formName} className="form">
       <div className="form--header">
         <h3 className="form--title">{data.form.title}</h3>
         <p className="form--description">{data.form.description}</p>
@@ -159,7 +180,7 @@ export default function FormContact({ id }) {
             text="Invia"
             action="event"
             fireAction={e => handleSubmit(e)}
-            disabled={!validForm}
+            // disabled={!validForm}
           />
         </div>
       </div>
@@ -190,7 +211,7 @@ export default function FormContact({ id }) {
             style="primary"
             text="Continua la navigazione"
             action="event"
-            fireAction={e => handleClose(e)}
+            fireAction={() => handleClose()}
           />
         </div>
       </div>
