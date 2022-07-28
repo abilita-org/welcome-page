@@ -39,7 +39,7 @@ export default function SectionClients() {
               <br />
               <Button
                 style="secondary"
-                text="contatta"
+                text="richiedi info"
                 size="large"
                 action="modal"
                 target="contact"

@@ -1,17 +1,11 @@
 import React, { useState } from "react"
-
+import SendRequest from "../api/request"
 import Field from "../components/field"
 import Button from "../components/button"
-import Checkbox from "../components/checkbox"
 
 const data = {
   title: "Le persone come te fanno la differenza",
   description: "Entra nella community di Viblio",
-  errors: {
-    invalidEmail: "L'indirizzo email non è valido.",
-    subscribed: "L'indirizzo email indicato è già registrato.",
-    default: "Si è verificato un errore.",
-  },
 }
 
 const defaultFields = {
@@ -21,13 +15,12 @@ const defaultFields = {
   company: "",
   role: "",
   skill: "",
-  acceptance: false,
 }
 
 export default function FormClients({ id, closeForm = () => null }) {
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
-  const [resultForm, setResultForm] = useState({ result: "", msg: "" })
+  const [requestState, setRequestState] = useState(null)
 
   function updateField({ target }) {
     const _fields = { ...fields }
@@ -38,44 +31,52 @@ export default function FormClients({ id, closeForm = () => null }) {
     setFields(_fields)
   }
 
-  function validateform(_field) {
+  function validateform(_fields) {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    const validEmail = re.test(String(_field.email).toLowerCase())
-    const validAcceptance = !!_field.acceptance
-    const validName = !!_field.name.length
-    const validSurname = !!_field.surname.length
-    const validRole = !!_field.role.length
 
-    const validIdentity =
-      validEmail && validName && validSurname && validAcceptance && validRole
-    setValidForm(validIdentity)
+    const fieldsErrors = Object.keys(fields).filter(field => {
+      switch (field) {
+        case "email":
+          return !re.test(String(_fields.email).toLowerCase())
+        case "company":
+          return false
+        default:
+          return !_fields[field].length
+      }
+    }).length
+    setRequestState(null)
+    setValidForm(!fieldsErrors)
   }
 
   async function handleSubmit(event) {
     event.preventDefault()
-
-    // Need feedback after submit
-    const result = { result: "error", msg: "error" }
-    setResultForm(result)
-  }
-
-  function recognizeErrors(error) {
-    if (error.includes("subscribed")) {
-      return data.errors.subscribed
-    } else if (error.includes("fake or invalid")) {
-      return data.errors.invalidEmail
-    } else {
-      return data.errors.default
+    const comment = `Nome cognome: ${fields.name} ${fields.surname}\nOrganizzazione: ${fields.company}\nRuolo: ${fields.role}\nCompetenze: ${fields.skill}`
+    const data = {
+      created_at: new Date(),
+      requester: {
+        name: [fields.name, fields.surname].join(" "),
+        email: fields.email,
+      },
+      type: "task",
+      subject: "Richiesta di iscrizione",
+      comment: { body: comment },
     }
+    setRequestState("loading")
+    const response = await SendRequest(data)
+    setRequestState(response)
   }
 
   function handleClose() {
+    setFields(defaultFields)
     closeForm()
   }
 
-  const formTemplate = resultForm => (
-    <form id={id} className="form">
+  const formTemplate = (
+    <form
+      id={id}
+      className={`form ${requestState === "loading" ? "is-loading" : ""}`}
+    >
       <div className="form--header">
         <h3 className="form--title">{data.title}</h3>
         <p className="form--description">{data.description}</p>
@@ -109,6 +110,14 @@ export default function FormClients({ id, closeForm = () => null }) {
           onChange={e => updateField(e)}
         />
         <Field
+          id="company"
+          label="Azienda per qui lavori"
+          info="(opzionale)"
+          value={fields.company}
+          placeholder="Nome dell'azienda"
+          onChange={e => updateField(e)}
+        />
+        <Field
           id="role"
           label="Il tuo ruolo professionale"
           value={fields.role}
@@ -125,11 +134,6 @@ export default function FormClients({ id, closeForm = () => null }) {
         />
       </div>
       <div className="form--footer">
-        <Checkbox
-          id="acceptance"
-          link="/privacy"
-          onChange={e => updateField(e)}
-        />
         <div className="form--actions">
           <Button
             style="service"
@@ -138,11 +142,7 @@ export default function FormClients({ id, closeForm = () => null }) {
             size="small"
             fireAction={e => handleClose(e)}
           />
-          {resultForm.result === "error" && (
-            <p className="form--error">
-              <small>{recognizeErrors(resultForm.msg)}</small>
-            </p>
-          )}
+
           <Button
             style="primary"
             text="Invia"
@@ -151,6 +151,16 @@ export default function FormClients({ id, closeForm = () => null }) {
             disabled={!validForm}
           />
         </div>
+        {requestState === "error" && (
+          <p className="form--error">
+            <small>
+              Qualcosa non è andato a buon fine
+              <br />
+              se il problema persiste contattaci alla email{" "}
+              <a href="mailto:info@viblio.com">info@viblio.com</a>
+            </small>
+          </p>
+        )}
       </div>
     </form>
   )
@@ -179,7 +189,5 @@ export default function FormClients({ id, closeForm = () => null }) {
     </div>
   )
   // console.log(resultForm)
-  return resultForm.result === "success"
-    ? successTemplate
-    : formTemplate(resultForm)
+  return requestState === "success" ? successTemplate : formTemplate
 }

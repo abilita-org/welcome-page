@@ -55,6 +55,11 @@
   }
 }
 
+.form.is-loading .form--body {
+  opacity: 80%;
+  filter: blur(.5rem);
+}
+
 #clients_form {
   @include mobileOnly {
     max-height: 90vh;
