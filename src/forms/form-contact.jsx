@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import { useQueryParam, StringParam } from "use-query-params"
-
+import SendRequest from "../api/request"
 import Field from "../components/field"
 import Select from "../components/select"
 import TextArea from "../components/text_area"
-import Checkbox from "../components/checkbox"
 import Button from "../components/button"
+
+const types = ["question", "task", "incident", "problem"]
 
 const data = {
   form: {
@@ -14,10 +15,10 @@ const data = {
       "Se sei interessato alla nostra piattaforma, hai segnalazioni da farci o più semplicemente hai bisogno di assistenza, indica la tua richiesta e specifica a cosa sei interessato.",
   },
   reasons: [
-    { text: "Richiesta di informazioni", value: "info" },
-    { text: "Pianificare una demo", value: "demo" },
-    { text: "Segnalare un malfunzionamento", value: "bug" },
-    { text: "Altro, indicato nel messaggio", value: "other" },
+    { text: "Richiesta di informazioni", value: types[0] },
+    { text: "Pianificare una demo", value: types[1] },
+    { text: "Segnalare un malfunzionamento", value: types[2] },
+    { text: "Non capisco come funziona", value: types[3] },
   ],
 }
 
@@ -25,29 +26,23 @@ const defaultFields = {
   name: "",
   surname: "",
   email: null,
-  reason: "info",
+  reason: null,
+  title: "",
   message: "",
-  acceptance: false,
 }
 
 const formName = "viblio-contact-form"
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
-export default function FormContact({ id }) {
+export default function FormContact({ id, closeForm = () => null }) {
   const userEmail = useQueryParam("email", StringParam)
 
   if (defaultFields.email === null) {
     defaultFields.email = !!userEmail[0] ? userEmail[0] : ""
   }
 
-  const [isSent, setIsSent] = useState(false)
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
+  const [requestState, setRequestState] = useState(null)
 
   function updateField({ target }) {
     const _fields = { ...fields }
@@ -58,45 +53,50 @@ export default function FormContact({ id }) {
     setFields(_fields)
   }
 
-  function validateform(_field) {
-    let validEmail, validMessage, validAcceptance, validName, validSurname
+  function validateform(_fields) {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    validEmail = re.test(String(_field.email).toLowerCase())
-    validName = !!_field.name.length
-    validSurname = !!_field.surname.length
-    validMessage = _field.message.length
-    const validInputs = validEmail && validName && validSurname && validMessage
 
-    validAcceptance = !!_field.acceptance
-
-    setValidForm(validInputs && validAcceptance)
+    const fieldsErrors = Object.keys(fields).filter(field => {
+      switch (field) {
+        case "email":
+          return !re.test(String(_fields.email).toLowerCase())
+        case "reason":
+          return !types.includes(_fields.reason)
+        default:
+          return !_fields[field].length
+      }
+    }).length
+    setRequestState(null)
+    setValidForm(!fieldsErrors)
   }
 
-  function handleSubmit(event) {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": formName, ...fields }),
-    })
-      .then(() => setIsSent(true))
-      .catch(error => alert(error))
-
+  async function handleSubmit(event) {
     event.preventDefault()
+    const data = {
+      created_at: new Date(),
+      requester: {
+        name: [fields.name, fields.surname].join(" "),
+        email: fields.email,
+      },
+      type: fields.reason,
+      subject: fields.title,
+      comment: { body: fields.message },
+    }
+    setRequestState("loading")
+    const response = await SendRequest(data)
+    setRequestState(response)
   }
 
   function handleClose() {
     setFields(defaultFields)
-    setIsSent(false)
+    closeForm()
   }
 
   const formTemplate = (
     <form
       id={id}
-      name={formName}
-      className="form"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
+      className={`form ${requestState === "loading" ? "is-loading" : ""}`}
     >
       <div className="form--header">
         <h3 className="form--title">{data.form.title}</h3>
@@ -123,7 +123,6 @@ export default function FormContact({ id }) {
             />
           </div>
         </div>
-
         <Field
           id="email"
           value={fields.email}
@@ -135,7 +134,15 @@ export default function FormContact({ id }) {
           id="reason"
           label="Ci stai contattando per"
           options={data.reasons}
+          placeholder="Seleziona una delle opzioni"
           selected={fields.reason}
+          onChange={e => updateField(e)}
+        />
+        <Field
+          id="title"
+          label="Oggetto della richiesta"
+          placeholder="Descrivi brevemente"
+          value={fields.title}
           onChange={e => updateField(e)}
         />
         <TextArea
@@ -148,12 +155,24 @@ export default function FormContact({ id }) {
         />
       </div>
       <div className="form--footer">
-        <Checkbox
-          id="acceptance"
-          link="/privacy"
-          onChange={e => updateField(e)}
-        />
+        {requestState === "error" && (
+          <p className="form--error">
+            <small>
+              Qualcosa non è andato a buon fine
+              <br />
+              se il problema persiste contattaci alla email{" "}
+              <a href="mailto:info@viblio.com">info@viblio.com</a>
+            </small>
+          </p>
+        )}
         <div className="form--actions">
+          <Button
+            style="service"
+            text="annulla"
+            action="modal"
+            size="small"
+            fireAction={e => handleClose(e)}
+          />
           <Button
             style="primary"
             text="Invia"
@@ -190,11 +209,11 @@ export default function FormContact({ id }) {
             style="primary"
             text="Continua la navigazione"
             action="event"
-            fireAction={e => handleClose(e)}
+            fireAction={() => handleClose()}
           />
         </div>
       </div>
     </div>
   )
-  return isSent ? successTemplate : formTemplate
+  return requestState === "success" ? successTemplate : formTemplate
 }

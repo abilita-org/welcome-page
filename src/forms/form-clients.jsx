@@ -1,28 +1,11 @@
 import React, { useState } from "react"
-import addToMailchimp from "gatsby-plugin-mailchimp"
-
+import SendRequest from "../api/request"
 import Field from "../components/field"
 import Button from "../components/button"
-import Checkbox from "../components/checkbox"
 
 const data = {
-  default: {
-    title: "Mettiti in contatto",
-    description: "Entra a far parte del network di Viblio",
-  },
-  business: {
-    title: "Dai una svolta alla tua azienda",
-    description: "Entra in contatto con i miei learning experts",
-  },
-  consumer: {
-    title: "Le persone come te fanno la differenza",
-    description: "Entra nella community di Viblio",
-  },
-  errors: {
-    invalidEmail: "L'indirizzo email non è valido.",
-    subscribed: "L'indirizzo email indicato è già registrato.",
-    default: "Si è verificato un errore.",
-  },
+  title: "Le persone come te fanno la differenza",
+  description: "Entra nella community di Viblio",
 }
 
 const defaultFields = {
@@ -32,14 +15,12 @@ const defaultFields = {
   company: "",
   role: "",
   skill: "",
-  acceptance: false,
 }
 
-export default function FormClients({ id, target, closeForm = () => null }) {
-  const [targetForm] = useState(target)
+export default function FormClients({ id, closeForm = () => null }) {
   const [fields, setFields] = useState(defaultFields)
   const [validForm, setValidForm] = useState(false)
-  const [resultForm, setResultForm] = useState({ result: "", msg: "" })
+  const [requestState, setRequestState] = useState(null)
 
   function updateField({ target }) {
     const _fields = { ...fields }
@@ -50,65 +31,55 @@ export default function FormClients({ id, target, closeForm = () => null }) {
     setFields(_fields)
   }
 
-  function validateform(_field) {
+  function validateform(_fields) {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    const validEmail = re.test(String(_field.email).toLowerCase())
-    const validAcceptance = !!_field.acceptance
-    const validName = !!_field.name.length
-    const validSurname = !!_field.surname.length
 
-    const validIdentity =
-      validEmail && validName && validSurname && validAcceptance
-    if (target === "business") {
-      const validCompany = !!_field.company.length
-      setValidForm(validIdentity && validCompany)
-    } else {
-      const validRole = !!_field.role.length
-      setValidForm(validIdentity && validRole)
-    }
+    const fieldsErrors = Object.keys(fields).filter(field => {
+      switch (field) {
+        case "email":
+          return !re.test(String(_fields.email).toLowerCase())
+        case "company":
+          return false
+        default:
+          return !_fields[field].length
+      }
+    }).length
+    setRequestState(null)
+    setValidForm(!fieldsErrors)
   }
 
   async function handleSubmit(event) {
     event.preventDefault()
-    const mailChimpFields = {
-      FNAME: fields.name,
-      LNAME: fields.surname,
+    const comment = `Nome cognome: ${fields.name} ${fields.surname}\nOrganizzazione: ${fields.company}\nRuolo: ${fields.role}\nCompetenze: ${fields.skill}`
+    const data = {
+      created_at: new Date(),
+      requester: {
+        name: [fields.name, fields.surname].join(" "),
+        email: fields.email,
+      },
+      type: "task",
+      subject: "Richiesta di iscrizione",
+      comment: { body: comment },
     }
-    if (targetForm === "business") {
-      mailChimpFields.COMPANY = fields.company
-    }
-    if (targetForm === "consumer") {
-      mailChimpFields.ROLE = fields.role
-      mailChimpFields.SKILL = fields.skill
-    }
-    const result = await addToMailchimp(fields.email, mailChimpFields)
-    setResultForm(result)
-  }
-
-  function recognizeErrors(error) {
-    if (error.includes("subscribed")) {
-      return data.errors.subscribed
-    } else if (error.includes("fake or invalid")) {
-      return data.errors.invalidEmail
-    } else {
-      return data.errors.default
-    }
+    setRequestState("loading")
+    const response = await SendRequest(data)
+    setRequestState(response)
   }
 
   function handleClose() {
+    setFields(defaultFields)
     closeForm()
   }
 
-  const formTemplate = resultForm => (
-    <form id={id} className="form">
+  const formTemplate = (
+    <form
+      id={id}
+      className={`form ${requestState === "loading" ? "is-loading" : ""}`}
+    >
       <div className="form--header">
-        <h3 className="form--title">
-          {data[!!targetForm ? targetForm : "default"].title}
-        </h3>
-        <p className="form--description">
-          {data[!!targetForm ? targetForm : "default"].description}
-        </p>
+        <h3 className="form--title">{data.title}</h3>
+        <p className="form--description">{data.description}</p>
       </div>
       <div className="form--body">
         <div className="form--columns columns">
@@ -131,7 +102,6 @@ export default function FormClients({ id, target, closeForm = () => null }) {
             />
           </div>
         </div>
-
         <Field
           id="email"
           label="Indirizzo email"
@@ -139,41 +109,31 @@ export default function FormClients({ id, target, closeForm = () => null }) {
           placeholder="mario.rossi@example.com"
           onChange={e => updateField(e)}
         />
-        {target === "consumer" && (
-          <>
-            <Field
-              id="role"
-              label="Il tuo ruolo professionale"
-              value={fields.role}
-              placeholder="Responsabile marketing"
-              onChange={e => updateField(e)}
-            />
-            <Field
-              id="skill"
-              label="Indica le competenze aggiuntive che vuoi esplorare"
-              info="Inserisci una o più parole chiave che la descrivono"
-              value={fields.skill}
-              placeholder="Contenuti social media"
-              onChange={e => updateField(e)}
-            />
-          </>
-        )}
-        {target === "business" && (
-          <Field
-            id="company"
-            label="Azienda"
-            value={fields.company}
-            placeholder="ferrero"
-            onChange={e => updateField(e)}
-          />
-        )}
-      </div>
-      <div className="form--footer">
-        <Checkbox
-          id="acceptance"
-          link="/privacy"
+        <Field
+          id="company"
+          label="Azienda per qui lavori"
+          info="(opzionale)"
+          value={fields.company}
+          placeholder="Nome dell'azienda"
           onChange={e => updateField(e)}
         />
+        <Field
+          id="role"
+          label="Il tuo ruolo professionale"
+          value={fields.role}
+          placeholder="Responsabile marketing"
+          onChange={e => updateField(e)}
+        />
+        <Field
+          id="skill"
+          label="Indica le competenze aggiuntive che vuoi esplorare"
+          info="Inserisci una o più parole chiave che la descrivono"
+          value={fields.skill}
+          placeholder="Contenuti social media"
+          onChange={e => updateField(e)}
+        />
+      </div>
+      <div className="form--footer">
         <div className="form--actions">
           <Button
             style="service"
@@ -182,11 +142,7 @@ export default function FormClients({ id, target, closeForm = () => null }) {
             size="small"
             fireAction={e => handleClose(e)}
           />
-          {resultForm.result === "error" && (
-            <p className="form--error">
-              <small>{recognizeErrors(resultForm.msg)}</small>
-            </p>
-          )}
+
           <Button
             style="primary"
             text="Invia"
@@ -195,6 +151,16 @@ export default function FormClients({ id, target, closeForm = () => null }) {
             disabled={!validForm}
           />
         </div>
+        {requestState === "error" && (
+          <p className="form--error">
+            <small>
+              Qualcosa non è andato a buon fine
+              <br />
+              se il problema persiste contattaci alla email{" "}
+              <a href="mailto:info@viblio.com">info@viblio.com</a>
+            </small>
+          </p>
+        )}
       </div>
     </form>
   )
@@ -223,7 +189,5 @@ export default function FormClients({ id, target, closeForm = () => null }) {
     </div>
   )
   // console.log(resultForm)
-  return resultForm.result === "success"
-    ? successTemplate
-    : formTemplate(resultForm)
+  return requestState === "success" ? successTemplate : formTemplate
 }

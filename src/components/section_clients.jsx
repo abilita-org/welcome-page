@@ -5,6 +5,7 @@ import industry from "../images/industry.svg"
 import consumer from "../images/consumer.svg"
 import Modal from "./modal"
 import FormClients from "../forms/form-clients"
+import FormContact from "../forms/form-contact"
 
 export default function SectionClients() {
   const [modal, setModal] = useState(false)
@@ -38,10 +39,10 @@ export default function SectionClients() {
               <br />
               <Button
                 style="secondary"
-                text="contatta"
+                text="richiedi info"
                 size="large"
                 action="modal"
-                target="business"
+                target="contact"
                 fireAction={e => showModal(e)}
               />
               <p>
@@ -80,11 +81,11 @@ export default function SectionClients() {
         </div>
       </div>
       <Modal showModal={modal} hideModal={e => hideModal(e)}>
-        <FormClients
-          id="clients_form"
-          target={target}
-          closeForm={e => hideModal(e)}
-        />
+        {target === "contact" ? (
+          <FormContact id="contact_form" closeForm={e => hideModal(e)} />
+        ) : (
+          <FormClients id="clients_form" closeForm={e => hideModal(e)} />
+        )}
       </Modal>
     </section>
   )
