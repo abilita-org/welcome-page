@@ -3,7 +3,7 @@ import React from "react"
 import logo from "../images/logo-viblio.svg"
 import linkedin from "../images/linkedin.svg"
 import instagram from "../images/instagram.svg"
-import twitter from "../images/twitter.svg"
+import youtube from "../images/youtube.svg"
 
 const menus = [
   [
@@ -42,9 +42,9 @@ export default function Footer() {
             </div>
           ))}
           <div className="column footer--social">
-            <img src={linkedin} alt="logo linkedin" height="40px" />
-            <img src={twitter} alt="logo twitter" height="40px" />
-            <img src={instagram} alt="logo instagram" height="40px" />
+            <a href="https://www.linkedin.com/company/viblio-digital-learning/"><img src={linkedin} alt="logo linkedin" height="40px" /></a>
+            <a href="https://www.youtube.com/channel/UC9cmrl8fGC3BVe46_V2T3dg"><img src={youtube} alt="logo youtube" height="40px" /></a>
+            <a href="https://www.instagram.com/helloviblio/"><img src={instagram} alt="logo instagram" height="40px" /></a>
           </div>
         </div>
       </div>
