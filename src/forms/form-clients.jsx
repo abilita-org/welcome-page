@@ -111,7 +111,7 @@ export default function FormClients({ id, closeForm = () => null }) {
         />
         <Field
           id="company"
-          label="Azienda per qui lavori"
+          label="Azienda per cui lavori"
           info="(opzionale)"
           value={fields.company}
           placeholder="Nome dell'azienda"
