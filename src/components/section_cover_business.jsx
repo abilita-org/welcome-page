@@ -20,7 +20,7 @@ export default function SectionCoverBusiness() {
             <img src={dart} alt="dart down" height="40px" />
           </a>
         </div>
-        <div className="column cover-business--content"></div>
+        <div className="column cover-business--content">
         <h3>Form</h3>
         </div>
       </div>
