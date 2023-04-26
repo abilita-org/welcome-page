@@ -3,7 +3,7 @@ import React from "react"
 
 export default function Divider() {
     return (
-        <header className="divider">
+        <section className="divider">
             <div className="divider--columns container">
                 <div className="divider--column container">
                     <p>Anticipa l'obsolescenza delle competenze di tutta la tua forza lavoro</p>
@@ -15,6 +15,6 @@ export default function Divider() {
                     <p>Stimola il self-empowerment e l'employability</p>
                 </div>
             </div>
-        </header>
+        </section>
     )
 }
