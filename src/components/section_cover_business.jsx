@@ -7,17 +7,12 @@ export default function SectionCoverBusiness() {
     <section id="cover" className="cover">
       <div className="cover--container container columns">
         <div className="column cover--content">
-          <h1 className="cover--title">
-            Ciao, mi chiamo <span style={{ display: "none" }}>Viblio</span>
-            <br />
-            <img className="cover--logo" src={logo} alt="logo viblio" />
-          </h1>
-          <p className="cover--subtitle">
-            Sono una guida per il tuo percorso di apprendimento nell’universo
-            della conoscenza. Raccolgo e seleziono per te i contenuti delle
-            migliori piattaforme digitali al mondo, rendendoti il protagonista
-            della tua crescita.
-          </p>
+          <h3 className="cover--title">
+            Scopri la nuova esperienza di <strong>Open & Social Learning</strong> 
+          </h3>
+          <h2>
+          Metti la <strong>conoscenza</strong> nelle mani dei tuoi dipendenti e ingaggiali nel modo più naturale,secondo i loro <strong>bisogni</strong> ed in maniera <strong>sociale</strong>.
+          </h2>
           <p className="cover--subtitle">
             Come? <br /> Seguimi e lo scoprirai.
           </p>
