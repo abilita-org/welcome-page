@@ -7,6 +7,7 @@ import run from "../images/mountain-run.svg"
 
 import Seo from "../components/seo"
 import Header from "../components/header"
+import Divider from "../components/divider"
 import Footer from "../components/footer"
 import SectionCoverBusiness from "../components/section_cover_business"
 import SectionFeature from "../components/section_feature"
@@ -54,6 +55,7 @@ export default function index() {
       <Header />
       <main>
         <SectionCoverBusiness />
+        <Divider />
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
