@@ -6,7 +6,7 @@ export default function SectionCoverBusiness() {
   return (
     <section id="cover" className="cover">
       <div className="cover--container container columns">
-        <div className="cover--content">
+        <div className="column cover--content">
           <h1 className="cover--title">
             Ciao, mi chiamo <span style={{ display: "none" }}>Viblio</span>
             <br />
