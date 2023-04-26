@@ -1,6 +1,7 @@
 import React from "react"
-import logo from "../images/logo-viblio.svg"
-import dart from "../images/dart-down.svg"
+import FormContact from "../forms/form-contact"
+//import logo from "../images/logo-viblio.svg"
+//import dart from "../images/dart-down.svg"
 
 export default function SectionCoverBusiness() {
   return (
@@ -13,15 +14,12 @@ export default function SectionCoverBusiness() {
           <h2>
           Metti la <strong>conoscenza</strong> nelle mani dei tuoi dipendenti e ingaggiali nel modo più naturale,secondo i loro <strong>bisogni</strong> ed in maniera <strong>sociale</strong>.
           </h2>
-          <p className="cover--subtitle">
-            Come? <br /> Seguimi e lo scoprirai.
+          <p >
+          Viblio monitora l'evoluzione dei ruoli e suggerisce contenuti per stare al passo, così le tue persone possono costruire abilità e competenze, ogni volta che ne hanno bisogno, nel formato che preferiscono, al proprio ritmo all'interno di un'esperienza di social learning.
           </p>
-          <a href="#features" target="_self">
-            <img src={dart} alt="dart down" height="40px" />
-          </a>
         </div>
         <div className="column cover-business--content">
-        <h3>Form</h3>
+        <FormContact />
         </div>
       </div>
     </section>
