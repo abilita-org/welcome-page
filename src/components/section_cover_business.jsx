@@ -6,8 +6,8 @@ export default function SectionCoverBusiness() {
   return (
     <section id="cover" className="cover">
       <div className="cover--container container columns">
-        <div className="column cover--content">
-          <h3 className="cover--title">
+        <div className="column cover-business--content">
+          <h3 className="cover-business--title">
             Scopri la nuova esperienza di <strong>Open & Social Learning</strong> 
           </h3>
           <h2>
@@ -19,6 +19,9 @@ export default function SectionCoverBusiness() {
           <a href="#features" target="_self">
             <img src={dart} alt="dart down" height="40px" />
           </a>
+        </div>
+        <div className="column cover-business--content"></div>
+        <h3>Form</h3>
         </div>
       </div>
     </section>
