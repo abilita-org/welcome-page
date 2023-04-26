@@ -8,7 +8,7 @@ import run from "../images/mountain-run.svg"
 import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import SectionCover from "../components/section_cover"
+import SectionCoverBusiness from "../components/section_cover_business"
 import SectionFeature from "../components/section_feature"
 import SectionPartner from "../components/section_partner"
 import SectionClients from "../components/section_clients"
@@ -53,7 +53,7 @@ export default function index() {
       <Seo />
       <Header />
       <main>
-        <SectionCover />
+        <SectionCoverBusiness />
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
