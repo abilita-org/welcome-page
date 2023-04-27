@@ -23,31 +23,24 @@ const data = {
   feartures: [
     {
       title:
-        "BUSINESS dimmi il lavoro che fai: ti mostrerò quello che c’è da imparare per stare al passo dei migliori",
+        "Job role Intelligence",
       description:
-        "Il mio database è in continuo aggiornamento e raccoglie le competenze chiave per più di 3000 ruoli: scegli quello che più ti si adatta e io selezionerò per te i migliori corsi e i migliori contenuti di apprendimento disponibili online.",
+        "Viblio ti permette di conoscere come evolvono i ruoli, quali competenze sono richieste per stare al passo, quali tecnologie impatteranno su di essi.&nbsp;Tra le \"hot skill\" specifiche di ruolo proposte da Viblio, la persona sceglie quelle che desidera sviluppare o approfondire (almeno 3 skill) per tracciare la rotta.Contestualmente, l'azienda ne può suggerire quelle che ritiene in linea con i suoi fabbisogni (piani di sviluppo o performance management)",
       image: { src: brain, alt: "brain connected" },
     },
     {
       title:
-        "conosciamoci meglio, e potrò selezionare i contenuti più adatti a te",
+        "I suggerimenti personalizzati",
       description:
-        "Rispondi alle domande della mia videointervista: grazie a un algoritmo di intelligenza artificiale validato da un team di esperti qualificati ti suggerirò i contenuti più adatti alle tue caratteristiche.",
+        ".La nostra intelligenza artificiale seleziona i contenuti più rilevanti, per quel ruolo e ogni singola skill selezionata, cercandoli nel nostro database di corsi, articoli, podcast, video, ted talk, etc.più le persone utilizzano Viblio e più suggerimenti personalizzati Viblio sarà in grado di creare.Non solo corsi, non solo un unico provider! Aggreghiamo contenuti da una molteplicità di fonti (scopri l'universo di contenuti in continuo aggiornamento, dal quale attingiamo, clicca qui)",
       image: { src: face, alt: "face detection" },
     },
     {
-      title: "scegli quello che più ti piace in totale libertà",
+      title: "Le collezioni personali ed editoriali",
       description:
-        "Podcast, video, interi corsi e molto altro: cerca nella mia rete di contenuti e filtra i risultati per tipo, modalità e impegno necessario che preferisci.",
+        "Viblio aiuta le persone ad organizzare il lavoro, attraverso comode collezioni personali per fruire dei contenuti proposti nel momento più facile e adeguato. E consente ai manager della tua azienda di creare utili collezioni di contenuti da condividere con i loro team.Oltre ai contenuti selezionati e curati da Viblio, le tue persone potranno utilizzare il nostro power metasearch per scoprire ogni giorni nuovi spunti di apprendimento, anche da collezioni preparati da esperti sulle tematiche più cercate dai vostri dipendenti.&nbsp;Non solo, Viblio arrichisce l'esperienza delle tue persone costantemente.Dagli argomenti più popolari, alla selezione degli esperti, le persone ricevono spinte gentili per stimolare il loro apprendimento.",
       image: { src: book, alt: "book opened" },
-    },
-    {
-      title:
-        "crea un percorso e segui i tuoi progressi: tutto in un unico posto",
-      description:
-        "Nella tua pagina personale potrai creare delle collezioni con i tuoi contenuti preferiti e monitorare il tuo percorso di apprendimento.",
-      image: { src: run, alt: "run between mountains" },
-    },
+    }
   ],
 }
 
