@@ -17,6 +17,7 @@ import SectionClients from "../components/section_clients"
 
 import "../styles/style.scss"
 import SectionClientBusiness from "../components/section_clients_business"
+import SectionFoundationBusiness from "../components/section_foundation_business"
 
 const data = {
   feartures: [
@@ -78,6 +79,7 @@ export default function index() {
           data={divider_text[1]}
         />
         <SectionClientBusiness />
+        <SectionFoundationBusiness />
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
