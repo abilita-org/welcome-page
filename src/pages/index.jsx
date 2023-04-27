@@ -76,6 +76,7 @@ export default function index() {
           id={2}
           data={divider_text[1]}
         />
+        <SectionCoverBusiness />
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
