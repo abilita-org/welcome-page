@@ -57,7 +57,7 @@ const divider_text = [{
 {
   text1: "Contenuti e piattaforma anche in italiano",
   text2: "Integrabile con il tuo LMS",
-  text3: "Contenuti&nbsp;suggeriti dall'Intelligenza Artificiale"
+  text3: "Contenuti suggeriti dall'Intelligenza Artificiale"
 }]
 
 export default function index() {
