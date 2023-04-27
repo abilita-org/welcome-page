@@ -45,6 +45,31 @@ const data = {
   ],
 }
 
+const data2 = {
+  feartures: [
+    {
+      title:
+        "Data Analysis",
+      description:
+        "Se anche tu credi nei dati per migliorare, a breve potrai usufruire di 2 strumenti per facilitare l'esperienza tua e delle tue persone e aiutarti a prendere decisioni di sviluppo basandoti su dati di reale utilizzo ed interesse.Resta in ascolto del fabbisogno formativo delle tue persone con la nostra Learning Intelligence Dashboard, un potente tool di data analysis che ti mostra dove stanno navigando le tue persone e quali interessi hanno generato, per intervenire prontamente suggerendo nuove direzioni, condividendo scoperte, tesori nascosti.Il Diario di bordo è il corrispondente strumento per i naviganti. Ognuna delle tue persone potrà tenere così tracciati i suoi progressi, le sue esplorazioni, e ricevere insight sul lavoro che sta facendo con semplici e immediati strumenti visuali.",
+      image: { src: brain, alt: "brain connected" },
+    },
+    {
+      title:
+        "Budget",
+      description:
+        "Ricompensa le tue persone con il dono dell'apprendimento.Offri l'apprendimento oltre ai soliti benefit in modo semplice e veloce grazie all'integrazione con Soldo.comAssegna alle tue persone un budget per l'apprendimento: mensile, trimestrale o annuale e consenti loro di gestire il proprio apprendimento continuo.Specifica le competenze che i membri del tuo team devono sviluppare per i loro ruoli e ti aiuteremo a far emergere contenuti pertinenti.",
+      image: { src: face, alt: "face detection" },
+    },
+    {
+      title: "Gruppi di studio e social learning",
+      description:
+        "L'abbiamo sperimentato tutti: dedicare tempo all'auto-formazione dopo una lunga giornata di lavoro, cercando l'incastro giusto tra i mille impegni, è una sfida difficilissima.Ma c'è una buona notizia!I nostri test e una solida letteratura scientifica, provano che studiare insieme agli altri riduce l'abbandono e incentiva le persone a portare a termine il percorso iniziato.Il tool Club Studio,&nbsp; per organizzare il proprio apprendimento insieme agli altri. Si sceglie un contenuto specifico, un corso, un podcast, un libro, una data di inizio e un numero di \"incontri\" per parlare di quanto appreso, magari invitando l'esperto aziendale di turno.Insieme ai gruppi di studio stiamo lavorando per rendere quanto più semplice condividere i propri percorsi di apprendimento con i colleghi, socializzare il proprio sapere, in modo informale e dinamico.",
+      image: { src: book, alt: "book opened" },
+    }
+  ],
+}
+
 const divider_text = [{
   text1: "Anticipa l'obsolescenza delle competenze di tutta la tua forza lavoro",
   text2: "Trasforma l'auto-formazione in un asset strategico",
@@ -90,8 +115,17 @@ export default function index() {
         <div class="center-button">
         <Button style="primary" text="Prenota una Demo" size="big" action="open"/>
         </div>
-        <SectionPartner />
-        <SectionClients />
+        <div class="center-button"><h1>COMING SOON</h1></div>
+        <div id="features2">
+          {data2.feartures.map((feature, i) => (
+            <SectionFeature
+              key={i}
+              data={feature}
+              id={i + 1}
+              inverse={(i + 1) % 2 == 0}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
     </>
