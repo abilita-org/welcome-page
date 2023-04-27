@@ -10,9 +10,6 @@ export default function SectionFeature({ id, inverse, data }) {
         }`}
       >
         <div className="column feature--content">
-          <p>
-            <span className="feature--number">{id}</span>
-          </p>
           <h3 className="feature--title">{title}</h3>
           <p className="feature--description">{description}</p>
         </div>

@@ -18,6 +18,7 @@ import SectionClients from "../components/section_clients"
 import "../styles/style.scss"
 import SectionClientBusiness from "../components/section_clients_business"
 import SectionFoundationBusiness from "../components/section_foundation_business"
+import Button from "../components/button"
 
 const data = {
   feartures: [
@@ -73,6 +74,7 @@ export default function index() {
         />
         <SectionClientBusiness />
         <SectionFoundationBusiness />
+        <Button style="primary" text="Prenota una Demo" size="big" action="open"/>
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
@@ -83,6 +85,7 @@ export default function index() {
             />
           ))}
         </div>
+        <Button style="primary" text="Prenota una Demo" size="big" action="open"/>
         <SectionPartner />
         <SectionClients />
       </main>
