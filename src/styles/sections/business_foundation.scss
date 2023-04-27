@@ -15,13 +15,15 @@
   &--contain-sub-content{
     display: flex;
     text-align: center;
-    background-color: cornflowerblue;
-    margin:10px;
+    
   }
   &--sub-content{
     flex: 1 1 100%;
     text-align: center;
     min-height: 40vh;
+    background-color: cornflowerblue;
+    border: 5px solid white;
+    padding:10px;
   }
   &--number {
     color: $primary;

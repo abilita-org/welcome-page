@@ -5,8 +5,8 @@ export default function SectionFoundationBusiness() {
     <section className="business-foundation">
       <div className="business-foundation--container container">
         <div className="business-foundation--content">
+        <h1>Viblio si fonda su 3 pilastri</h1>  
         <div className="business-foundation--contain-sub-content">
-          <h1>Viblio si fonda su 3 pilastri</h1>
             <div className="business-foundation--sub-content">
               <h1>Job role Intelligence </h1>
             </div>
