@@ -74,7 +74,9 @@ export default function index() {
         />
         <SectionClientBusiness />
         <SectionFoundationBusiness />
+        <div class="center-button">
         <Button style="primary" text="Prenota una Demo" size="big" action="open"/>
+        </div>
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
@@ -85,7 +87,9 @@ export default function index() {
             />
           ))}
         </div>
+        <div class="center-button">
         <Button style="primary" text="Prenota una Demo" size="big" action="open"/>
+        </div>
         <SectionPartner />
         <SectionClients />
       </main>
