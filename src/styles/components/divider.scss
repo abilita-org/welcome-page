@@ -7,6 +7,11 @@
     flex-wrap: wrap;
     width: 100%;
   }
+@media (min-width: 48em) {
+  &--columns {
+    flex-wrap: nowrap;
+  }
+}
 &--column {
     flex: 33.33%;
   }
