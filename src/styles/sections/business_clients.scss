@@ -18,8 +18,15 @@
   }
   &--sub-content{
     flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
     min-height: 40vh;
+  }
+  @media (min-width: 48em) {
+    &--sub-content {
+      flex-wrap: nowrap;
+    }
   }
   &--number {
     color: $primary;

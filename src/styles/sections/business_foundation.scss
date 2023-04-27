@@ -3,7 +3,6 @@
 }
 .business-foundation {
   padding: 2rem 0;
-  min-height: 70vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -19,11 +18,17 @@
   }
   &--sub-content{
     flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
-    min-height: 40vh;
     background-color: cornflowerblue;
     border: 5px solid white;
     padding:10px;
+  }
+  @media (min-width: 48em) {
+    &--sub-content {
+      flex-wrap: nowrap;
+    }
   }
   &--number {
     color: $primary;
