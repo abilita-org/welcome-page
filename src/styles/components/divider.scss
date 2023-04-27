@@ -1,22 +1,33 @@
+#divider_1 {
+  background-color: black;
+  color: white;
+}
+
+#divider_1 {
+  background-color: purple;
+  color: white;
+}
+
 .divider {
-    background-color: black;
-    color: white;
-&--columns {
+  &--columns {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
   }
-@media (min-width: 48em) {
-  &--columns {
-    flex-wrap: nowrap;
+
+  @media (min-width: 48em) {
+    &--columns {
+      flex-wrap: nowrap;
+    }
   }
-}
-&--column {
+
+  &--column {
     flex: 1 1 100%;
   }
-@--column p{
-  padding: 10%;
-  font-weight: bold;
-}
+
+  @--column-text {
+    padding: 10%;
+    font-weight: bold;
+  }
 }

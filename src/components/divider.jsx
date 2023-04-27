@@ -1,18 +1,19 @@
 import React from "react"
 
 
-export default function Divider() {
+export default function Divider({ id, data }) {
+    const { text1, text2, text3 } = data
     return (
-        <section className="divider">
+        <section id={`divider_${id}`} className="divider">
             <div className="divider--columns container">
                 <div className="divider--column container">
-                    <p>Anticipa l'obsolescenza delle competenze di tutta la tua forza lavoro</p>
+                    <p className="divider--column-text">{text1}</p>
                 </div>
                 <div className="divider--column container">
-                    <p>Trasforma l'auto-formazione in un asset strategico</p>
+                    <p className="divider--column-text">{text2}</p>
                 </div>
                 <div className="divider--column container">
-                    <p>Stimola il self-empowerment e l'employability</p>
+                    <p className="divider--column-text">{text3}</p>
                 </div>
             </div>
         </section>

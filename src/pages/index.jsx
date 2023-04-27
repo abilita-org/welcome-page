@@ -49,6 +49,17 @@ const data = {
   ],
 }
 
+const divider_text = [{
+  text1: "Anticipa l'obsolescenza delle competenze di tutta la tua forza lavoro",
+  text2: "Trasforma l'auto-formazione in un asset strategico",
+  text3: "Stimola il self-empowerment e l'employability"
+},
+{
+  text1: "Contenuti e piattaforma anche in italiano",
+  text2: "Integrabile con il tuo LMS",
+  text3: "Contenuti&nbsp;suggeriti dall'Intelligenza Artificiale"
+}]
+
 export default function index() {
   return (
     <>
@@ -56,8 +67,15 @@ export default function index() {
       <Header />
       <main>
         <SectionCoverBusiness />
-        <Divider />
+        <Divider
+          id={1}
+          data={divider_text[0]}
+        />
         <SectionJobRoleBusiness />
+        <Divider
+          id={2}
+          data={divider_text[1]}
+        />
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
