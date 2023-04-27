@@ -16,6 +16,7 @@ import SectionPartner from "../components/section_partner"
 import SectionClients from "../components/section_clients"
 
 import "../styles/style.scss"
+import SectionClientBusiness from "../components/section_clients_business"
 
 const data = {
   feartures: [
@@ -76,7 +77,7 @@ export default function index() {
           id={2}
           data={divider_text[1]}
         />
-        <SectionCoverBusiness />
+        <SectionClientBusiness />
         <div id="features">
           {data.feartures.map((feature, i) => (
             <SectionFeature
