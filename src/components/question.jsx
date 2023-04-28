@@ -5,7 +5,7 @@ export default function Question({ id, question, answer,onClick = () => null }) 
   function toggleText() {
     let answer = document.getElementById(`answer-${id}`);
     console.log(answer.style.display)
-    if(answer.style.display == 'none'){
+    if(answer.style.display == 'none' || answer.style.display == ''){
       answer.style.display = 'block'
     }else{
       answer.style.display = 'none'
