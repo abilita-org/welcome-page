@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 
 import brain from "../images/brain-connected.svg"
 import face from "../images/face-detected.svg"
@@ -81,6 +81,17 @@ const divider_text = [{
 }]
 
 export default function index() {
+  const [modal, setModal] = useState(false)
+  const [target, setTarget] = useState("")
+
+  function showModal(t) {
+    setTarget(t)
+    setModal(true)
+  }
+  function hideModal() {
+    setTarget("")
+    setModal(false)
+  }
   return (
     <>
       <Seo />
