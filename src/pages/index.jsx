@@ -3,7 +3,6 @@ import React from "react"
 import brain from "../images/brain-connected.svg"
 import face from "../images/face-detected.svg"
 import book from "../images/book-opened.svg"
-import run from "../images/mountain-run.svg"
 
 import Seo from "../components/seo"
 import Header from "../components/header"
@@ -12,8 +11,6 @@ import Footer from "../components/footer"
 import SectionCoverBusiness from "../components/section_cover_business"
 import SectionJobRoleBusiness from "../components/section_jobrole_business"
 import SectionFeature from "../components/section_feature"
-import SectionPartner from "../components/section_partner"
-import SectionClients from "../components/section_clients"
 
 import "../styles/style.scss"
 import SectionClientBusiness from "../components/section_clients_business"
@@ -35,7 +32,7 @@ const data = {
       title:
         "I suggerimenti personalizzati",
       description:
-        ".La nostra intelligenza artificiale seleziona i contenuti più rilevanti, per quel ruolo e ogni singola skill selezionata, cercandoli nel nostro database di corsi, articoli, podcast, video, ted talk, etc.più le persone utilizzano Viblio e più suggerimenti personalizzati Viblio sarà in grado di creare.Non solo corsi, non solo un unico provider! Aggreghiamo contenuti da una molteplicità di fonti (scopri l'universo di contenuti in continuo aggiornamento, dal quale attingiamo, <a href=\"https://business.viblio.com/partners/\" target=\"_blank\">clicca qui</a>)",
+        "La nostra intelligenza artificiale seleziona i contenuti più rilevanti, per quel ruolo e ogni singola skill selezionata, cercandoli nel nostro database di corsi, articoli, podcast, video, ted talk, etc.più le persone utilizzano Viblio e più suggerimenti personalizzati Viblio sarà in grado di creare.Non solo corsi, non solo un unico provider! Aggreghiamo contenuti da una molteplicità di fonti (scopri l'universo di contenuti in continuo aggiornamento, dal quale attingiamo, <a href=\"https://business.viblio.com/partners/\" target=\"_blank\">clicca qui</a>",
       image: { src: face, alt: "face detection" },
     },
     {
