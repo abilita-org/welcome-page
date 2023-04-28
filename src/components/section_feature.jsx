@@ -11,7 +11,7 @@ export default function SectionFeature({ id, inverse, data }) {
       >
         <div className="column feature--content">
           <h3 className="feature--title">{title}</h3>
-          <p className="feature--description">{description}</p>
+          <p className="feature--description" dangerouslySetInnerHTML={{__html: description}}></p>
         </div>
         <div className="column feature--media">
           <img
