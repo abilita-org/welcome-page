@@ -14,6 +14,21 @@ export default function SectionFaqBusiness() {
     question: "Come faccio a far accedere i miei team a Viblio Business?",
     answer:
       "Prenota una demo e un nostro Expert ti spiegherà come Viblio può essere personalizzato su misura per la tua Azienda per aiutare il tuo Capitale Umano a crescere e svilupparsi Potrai avere un periodo di prova gratuito di 15 giorni, al termine dei quali confrontarti con noi per mettere a fuoco la soluzione ideale per te."
+  },
+  {
+    question: "Come funziona se abbiamo un LMS già configurato?",
+    answer:
+      "Siamo in grado di integrarci con le LMS dei nostri clienti attraverso API con progetti specifici, un nostro Expert ti potrà spiegare nel dettaglio come possiamo integrare Viblio nella tua LMS."
+  },
+  {
+    question: "Quanto costa Viblio Business?",
+    answer:
+      "(Collegamento con pagina pagamenti)"
+  },
+  {
+    question: "Come posso assicurarmi che i miei team seguano effettivamente i loro percorsi di apprendimento personalizzati?",
+    answer:
+      "Viblio ti fornirà metriche di dettaglio e ti accompagnerà con learning expert dedicati per monitorare e accompagnarti nella gestione dell'ingaggio delle tue persone."
   }]
   return (
     <section id="cover" className="cover">
