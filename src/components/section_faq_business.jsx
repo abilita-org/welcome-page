@@ -1,5 +1,5 @@
 import React from "react"
-import FormContact from "../forms/form-contact"
+//import FormContact from "../forms/form-contact"
 import Question from "./question"
 //import logo from "../images/logo-viblio.svg"
 //import dart from "../images/dart-down.svg"
@@ -31,8 +31,8 @@ export default function SectionFaqBusiness() {
       "Viblio ti fornirà metriche di dettaglio e ti accompagnerà con learning expert dedicati per monitorare e accompagnarti nella gestione dell'ingaggio delle tue persone."
   }]
   return (
-    <section id="cover" className="cover">
-      <h1>Domande Frequenti</h1>
+    <section id="faq" className="faq">
+      <h1 className="titolo">Domande Frequenti</h1>
       <div className="cover--container container columns">
         <div className="column cover-business--content">
         {faq.map((q, i) => (

@@ -117,7 +117,7 @@ export default function index() {
         <div class="center-button">
         <Button style="primary" text="Prenota una Demo" size="big" action="scheduler"/>
         </div>
-        <div class="center-button"><h1>COMING SOON</h1></div>
+        <div class="center-button"><h1 className="titolo">COMING SOON</h1></div>
         <div id="features2">
           {data2.feartures.map((feature, i) => (
             <SectionFeature
@@ -129,7 +129,7 @@ export default function index() {
           ))}
         </div>
         <SectionFaqBusiness />
-        <h1 className="feature--title">PRENOTA UNA DEMO</h1>
+        <h1 className="titolo">PRENOTA UNA DEMO</h1>
         <Scheduler />
       </main>
       <Footer />

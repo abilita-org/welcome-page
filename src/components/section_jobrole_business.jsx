@@ -3,7 +3,7 @@ import React from "react"
 
 export default function SectionJobRoleBusiness() {
   return (
-    <section id="cover" className="cover">
+    <section id="jobrole" className="jobrole">
       <div className="cover--container container columns">
         <div className="column cover-business--content">
           <h1>IMMAGINE/VIDEO</h1>
