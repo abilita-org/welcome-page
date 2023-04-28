@@ -112,7 +112,7 @@ export default function index() {
           ))}
         </div>
         <div class="center-button">
-        <Button style="primary" text="Prenota una Demo" size="big" action="scheduler"/>
+        <Button style="primary" text="Prenota una Demo" size="large" action="scheduler"/>
         </div>
         <div class="center-button"><h1 className="titolo">COMING SOON</h1></div>
         <div id="features2">
@@ -125,6 +125,7 @@ export default function index() {
             />
           ))}
         </div>
+        <Button style="secondary" text="Inserisci la tua mail per ricevere notizie del lancio!" size="small" action="modal" target="contact"/>
         <SectionFaqBusiness />
         <h1 className="titolo">PRENOTA UNA DEMO</h1>
         <Scheduler />
