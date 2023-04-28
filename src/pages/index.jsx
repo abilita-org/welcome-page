@@ -125,7 +125,7 @@ export default function index() {
             />
           ))}
         </div>
-        <Button style="secondary" text="Inserisci la tua mail per ricevere notizie del lancio!" size="small" action="modal" target="contact"/>
+        <Button style="secondary" text="Inserisci la tua mail per ricevere notizie del lancio!" size="small" action="modal" target="contact" fireAction={e => showModal(e)} />
         <SectionFaqBusiness />
         <h1 className="titolo">PRENOTA UNA DEMO</h1>
         <Scheduler />
