@@ -35,7 +35,7 @@ const data = {
       title:
         "I suggerimenti personalizzati",
       description:
-        ".La nostra intelligenza artificiale seleziona i contenuti più rilevanti, per quel ruolo e ogni singola skill selezionata, cercandoli nel nostro database di corsi, articoli, podcast, video, ted talk, etc.più le persone utilizzano Viblio e più suggerimenti personalizzati Viblio sarà in grado di creare.Non solo corsi, non solo un unico provider! Aggreghiamo contenuti da una molteplicità di fonti (scopri l'universo di contenuti in continuo aggiornamento, dal quale attingiamo, clicca qui)",
+        ".La nostra intelligenza artificiale seleziona i contenuti più rilevanti, per quel ruolo e ogni singola skill selezionata, cercandoli nel nostro database di corsi, articoli, podcast, video, ted talk, etc.più le persone utilizzano Viblio e più suggerimenti personalizzati Viblio sarà in grado di creare.Non solo corsi, non solo un unico provider! Aggreghiamo contenuti da una molteplicità di fonti (scopri l'universo di contenuti in continuo aggiornamento, dal quale attingiamo, <a href=\"https://business.viblio.com/partners/\" target=\"_blank\">clicca qui</a>)",
       image: { src: face, alt: "face detection" },
     },
     {
