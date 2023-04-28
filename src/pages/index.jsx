@@ -19,6 +19,7 @@ import "../styles/style.scss"
 import SectionClientBusiness from "../components/section_clients_business"
 import SectionFoundationBusiness from "../components/section_foundation_business"
 import Button from "../components/button"
+import SectionFaqBusiness from "../components/section_faq_business"
 
 const data = {
   feartures: [
@@ -126,6 +127,7 @@ export default function index() {
             />
           ))}
         </div>
+        <SectionFaqBusiness />
       </main>
       <Footer />
     </>
