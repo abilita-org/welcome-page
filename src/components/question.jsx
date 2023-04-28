@@ -3,7 +3,6 @@ import inputChecked from "../images/checkbox-checked.svg"
 import inputUnchecked from "../images/checkbox-unchecked.svg"
 
 export default function Question({ id, question, answer,onClick = () => null }) {
-  const ref = useRef(null);
   function toggleText() {
     let answer = document.getElementById(`answer-${id}`);
     console.log(answer.style)
