@@ -1,11 +1,15 @@
 import React, { useState } from "react"
-import inputChecked from "../images/checkbox-checked.svg"
-import inputUnchecked from "../images/checkbox-unchecked.svg"
+
 
 export default function Question({ id, question, answer,onClick = () => null }) {
   function toggleText() {
     let answer = document.getElementById(`answer-${id}`);
-    console.log(answer.style)
+    console.log(answer.style.display)
+    if(answer.style.display == 'none'){
+      answer.style.display = 'block'
+    }else{
+      answer.style.display = 'none'
+    }
   }
   return (
     <div className="question--container">
