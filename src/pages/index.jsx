@@ -81,17 +81,6 @@ const divider_text = [{
 }]
 
 export default function index() {
-  const [modal, setModal] = useState(false)
-  const [target, setTarget] = useState("")
-
-  function showModal(t) {
-    setTarget(t)
-    setModal(true)
-  }
-  function hideModal() {
-    setTarget("")
-    setModal(false)
-  }
   return (
     <>
       <Seo />
@@ -136,8 +125,7 @@ export default function index() {
             />
           ))}
         </div>
-        <Button style="secondary" text="Inserisci la tua mail per ricevere notizie del lancio!" size="small" action="modal" target="contact" fireAction={e => showModal(e)} />
-        <SectionFaqBusiness />
+         <SectionFaqBusiness />
         <h1 className="titolo">PRENOTA UNA DEMO</h1>
         <Scheduler />
       </main>
