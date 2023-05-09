@@ -32,5 +32,11 @@ module.exports = {
       __key: "images",
     },
     "gatsby-plugin-sass",
+    {
+    resolve: 'gatsby-plugin-iubenda-cookie-footer',
+    options: {
+      iubendaOptions: {"lang":"it","siteId":3063071,"cookiePolicyId":69014013, /* ... */ },
+    }
+  },
   ],
 }
