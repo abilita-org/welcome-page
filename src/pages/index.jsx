@@ -12,10 +12,11 @@ import SectionCover from "../components/section_cover"
 import SectionFeature from "../components/section_feature"
 import SectionPartner from "../components/section_partner"
 import SectionClients from "../components/section_clients"
-import {Link, Trans, useTranslation} from 'gatsby-plugin-react-i18next';
-
+import {useTranslation} from 'gatsby-plugin-react-i18next';
 import "../styles/style.scss"
+
 const {t} = useTranslation();
+
 const data = {
   feartures: [
     {

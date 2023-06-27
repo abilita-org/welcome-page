@@ -10,12 +10,10 @@ export default function Modal({ children, showModal, hideModal = () => null }) {
   }
 
   useEffect(() => {
-    if(window !== "undefined"){
     document.addEventListener("click", handleClickOutside, true)
     return () => {
       document.removeEventListener("click", handleClickOutside, true)
     }
-  }
   })
 
   return (
