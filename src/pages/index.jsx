@@ -15,15 +15,15 @@ import SectionClients from "../components/section_clients"
 import {useTranslation} from 'gatsby-plugin-react-i18next';
 import "../styles/style.scss"
 
-const {t} = useTranslation();
+//const {t} = useTranslation();
 
 const data = {
   feartures: [
     {
       title:
-        t('hello'),
+        'hello',
       description:
-        t('hello-header'),
+        'hello-header',
       image: { src: brain, alt: "brain connected" },
     },
     {
