@@ -13,6 +13,7 @@ import SectionCover from "../components/section_cover"
 import SectionFeature from "../components/section_feature"
 import SectionPartner from "../components/section_partner"
 import SectionClients from "../components/section_clients"
+import { withI18next } from 'gatsby-plugin-i18next';
 
 import "../styles/style.scss"
 
@@ -50,8 +51,7 @@ const data = {
   ],
 }
 
-export default function index() {
-  return (
+const IndexPage = () => (
     <>
       <Seo />
       <Header />
@@ -72,20 +72,14 @@ export default function index() {
       </main>
       <Footer />
     </>
-  )
-}
+  );
 
+export default withI18next()(IndexPage);
 
 export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
+      ...TranslationFragment
     }
   }
 `;
