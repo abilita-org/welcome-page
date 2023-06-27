@@ -2,13 +2,16 @@ import React from "react"
 import logo from "../images/logo-viblio.svg"
 import dart from "../images/dart-down.svg"
 
+import {useTranslation} from 'gatsby-plugin-react-i18next';
+
 export default function SectionCover() {
+  const {t} = useTranslation() 
   return (
     <section id="cover" className="cover">
       <div className="cover--container container">
         <div className="cover--content">
           <h1 className="cover--title">
-            Ciao, mi chiamo <span style={{ display: "none" }}>Viblio</span>
+            {t('hello')} <span style={{ display: "none" }}>Viblio</span>
             <br />
             <img className="cover--logo" src={logo} alt="logo viblio" />
           </h1>
