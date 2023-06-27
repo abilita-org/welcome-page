@@ -11,7 +11,7 @@ export default function SectionCover() {
       <div className="cover--container container">
         <div className="cover--content">
           <h1 className="cover--title">
-            <Trans>Hello, my name is</Trans> <span style={{ display: "none" }}>Viblio</span>
+            <Trans>Ciao, mi chiamo </Trans> <span style={{ display: "none" }}>Viblio</span>
             <br />
             <img className="cover--logo" src={logo} alt="logo viblio" />
           </h1>
