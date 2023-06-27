@@ -13,7 +13,7 @@ import SectionCover from "../components/section_cover"
 import SectionFeature from "../components/section_feature"
 import SectionPartner from "../components/section_partner"
 import SectionClients from "../components/section_clients"
-import { withI18next } from 'gatsby-plugin-i18next';
+import { withI18next } from 'gatsby-plugin-react-i18next';
 
 import "../styles/style.scss"
 
