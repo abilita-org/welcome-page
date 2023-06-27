@@ -74,7 +74,7 @@ const IndexPage = () => (
     </>
   );
 
-export default withI18next()(IndexPage);
+export default IndexPage;
 
 
 
