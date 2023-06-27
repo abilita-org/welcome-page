@@ -23,9 +23,9 @@ const data = {
   feartures: [
     {
       title:
-        'hello',
+      "dimmi il lavoro che fai: ti mostrerò quello che c’è da imparare per stare al passo dei migliori",
       description:
-        'hello-header',
+        "Il mio database è in continuo aggiornamento e raccoglie le competenze chiave per più di 3000 ruoli: scegli quello che più ti si adatta e io selezionerò per te i migliori corsi e i migliori contenuti di apprendimento disponibili online.",
       image: { src: brain, alt: "brain connected" },
     },
     {
