@@ -75,3 +75,19 @@ export default function index() {
 }
 
 
+export const query = graphql`
+  query($locale: String!, $slug: String!) {
+    mdx(
+      fields: { locale: { eq: $locale } }
+      frontmatter: { slug: { eq: $slug } }
+    ) {
+      frontmatter {
+        slug
+        title
+      }
+      body
+    }
+  }
+`
+
+
