@@ -1,5 +1,6 @@
 import React from "react"
 
+import {graphql} from 'gatsby';
 import brain from "../images/brain-connected.svg"
 import face from "../images/face-detected.svg"
 import book from "../images/book-opened.svg"
