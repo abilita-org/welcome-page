@@ -36,9 +36,9 @@ module.exports = {
     resolve: `gatsby-plugin-react-i18next`,
     options: {
       localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-      languages: [`en`, `es`, `de`],
+      languages: [`en`, `it`],
       defaultLanguage: `en`,
-      siteUrl: `https://example.com`,
+      siteUrl: `https://viblio.com`,
       // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
       trailingSlash: 'always',
       // you can pass any i18next options
