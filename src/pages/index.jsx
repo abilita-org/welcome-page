@@ -1,6 +1,5 @@
 import React from "react"
 
-import {graphql} from 'gatsby';
 import brain from "../images/brain-connected.svg"
 import face from "../images/face-detected.svg"
 import book from "../images/book-opened.svg"
@@ -75,17 +74,4 @@ export default function index() {
   )
 }
 
- 
-export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;
+
