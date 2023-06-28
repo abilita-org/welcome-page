@@ -14,8 +14,7 @@ import "../styles/style.scss"
 
  */
 
-export default function CookiePolicy() {
-  return (
+const CookiePolicy = () => (
     <>
       <Seo />
       <Header />
@@ -223,4 +222,20 @@ export default function CookiePolicy() {
       <Footer />
     </>
   )
-}
+
+export default CookiePolicy
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
+

@@ -1,15 +1,16 @@
+import { graphql } from 'gatsby'
 import React from "react"
 import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import FormContact from "../forms/form-contact"
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 import "../styles/style.scss"
 
 import viblioBrand from "../images/viblio-brand.svg"
 
-export default function Contact() {
-  return (
+const Contact = () =>(
     <>
       <Seo />
       <Header />
@@ -61,4 +62,19 @@ export default function Contact() {
       <Footer />
     </>
   )
-}
+
+export default Contact
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -1,12 +1,13 @@
+import { graphql } from 'gatsby'
 import React from "react"
 import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 import "../styles/style.scss"
 
-export default function PrivacyPolicy() {
-  return (
+const PrivacyPolicy = () => (
     <>
       <Seo />
       <Header />
@@ -25,31 +26,19 @@ export default function PrivacyPolicy() {
           <div className="page--contents">
             <section className="page--content">
               <p>
-                <span className="text-big">Gentile Utente,</span>
+                <span className="text-big"><Trans>privacy-title</Trans></span>
                 <br />
-                Apprendo S.r.l. si impegna a rispettare la privacy dell’utente
-                del sito nei termini previsti dalle normative applicabili sulla
-                tutela dei dati personali ed in particolare il Regolamento (UE)
-                2016/679 (di seguito “Regolamento”).
+                <Trans>privacy-description</Trans>
                 <br />
-                Questo documento (“Privacy Policy”) fornisce informazioni sul
-                trattamento dei dati personali raccolti dalla società APPRENDO
-                S.r.l. tramite questo sito web (di seguito “Sito”) e pertanto
-                costituisce informativa agli interessati ai sensi delle predette
-                normative. L’informativa è resa solo per il presente Sito
-                www.viblio.com e non anche per altri siti web eventualmente
-                consultati dall’utente tramite link.
+                <Trans>privacy-description1</Trans>
               </p>
             </section>
             <section className="page--content">
               <h2 className="text-notehead">
-                1 - Chi è il titolare del trattamento e il dpo?
+              <Trans>privacy-question</Trans>
               </h2>
               <p>
-                Il titolare del trattamento è la società
-                <strong> Apprendo S.r.l.</strong> con sede in 33100 Udine, via
-                Marinoni n. 12 (P.I. 03029040304). Il Titolare è contattabile
-                all’indirizzo email: <strong>info@viblio.com</strong>.
+              <Trans>privacy-answer</Trans>
               </p>
             </section>
             <section className="page--content">
@@ -325,4 +314,19 @@ export default function PrivacyPolicy() {
       <Footer />
     </>
   )
-}
+
+export default PrivacyPolicy
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
