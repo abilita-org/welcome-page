@@ -13,19 +13,19 @@ import SectionCover from "../components/section_cover"
 import SectionFeature from "../components/section_feature"
 import SectionPartner from "../components/section_partner"
 import SectionClients from "../components/section_clients"
-
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import "../styles/style.scss"
 
-//const {t} = useTranslation();
+const {t} = useTranslation();
 
 const data = {
   feartures: [
     {
       title:
-      "dimmi il lavoro che fai: ti mostrerò quello che c’è da imparare per stare al passo dei migliori",
+      t("title-1"),
       description:
-        "Il mio database è in continuo aggiornamento e raccoglie le competenze chiave per più di 3000 ruoli: scegli quello che più ti si adatta e io selezionerò per te i migliori corsi e i migliori contenuti di apprendimento disponibili online.",
+      t("text-1"),
       image: { src: brain, alt: "brain connected" },
     },
     {
