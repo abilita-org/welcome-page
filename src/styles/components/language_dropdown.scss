@@ -35,10 +35,20 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   
       li {
         padding: 8px 16px;
       }
     }
+  
+    &__button:focus + &__menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
   }
+  
