@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "./button"
 import logo from "../images/logo-viblio.svg"
-import {Link, useI18next} from 'gatsby-plugin-react-i18next';
+import LanguageDropdown from "./language_dropdown";
 
 export default function Header() {
   const {languages, originalPath} = useI18next();
@@ -16,19 +16,7 @@ export default function Header() {
             height="80px"
           />
         </a>
-        <div className="header--languages-container">
-          
-        <ul className="header--languages">
-        <span data-v-4295d220="" className="input-icon fas fa-globe"></span>
-        {languages.map((lng) => (
-          <li key={lng}>
-            <Link to={originalPath} language={lng}>
-              {lng}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      </div>
+        <LanguageDropdown></LanguageDropdown>
         <div className="header--action">
           <Button style="primary" text="login" size="small" action="login"/>
         </div>
