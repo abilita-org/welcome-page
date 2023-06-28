@@ -51,59 +51,27 @@ const PrivacyPolicy = () => (
               <ul>
                 <li>
                   <p>
-                    trattiamo i <strong>dati della sua navigazione</strong> sul
-                    nostro sito, cioè quelli per i quali la trasmissione al Sito
-                    è necessaria per il funzionamento dei sistemi informatici
-                    preposti alla gestione del Sito e dei protocolli di
-                    comunicazione di Internet. In questa categoria di dati
-                    rientrano gli indirizzi IP o i nomi a dominio dei computer
-                    utilizzati dagli utenti che si connettono al sito, gli
-                    indirizzi in notazione URI (Uniform Resource Identifier)
-                    delle risorse richieste, l'orario della richiesta, il metodo
-                    utilizzato nel sottoporre la richiesta al server, la
-                    dimensione del file ottenuto in risposta, il codice numerico
-                    indicante lo stato della risposta data dal server (buon
-                    fine, errore, ecc.) ed altri parametri relativi al sistema
-                    operativo e all'ambiente informatico dell'utente.
+                  <Trans>privacy-answer1-2</Trans>
                   </p>
                 </li>
               </ul>
               <p>
-                Questi dati vengono utilizzati al solo fine di ricavare
-                informazioni statistiche anonime sull'uso del sito e per
-                controllarne il corretto funzionamento e vengono cancellati
-                immediatamente dopo l'elaborazione. I dati potrebbero essere
-                utilizzati per l'accertamento di responsabilità in caso di
-                ipotetici reati informatici ai danni del sito.
+              <Trans>privacy-answer1-3</Trans>
               </p>
               <ul>
                 <li>
                   <p>
-                    trattiamo i dati personali che ci comunichi (oltre a{" "}
-                    <strong>nome, cognome, azienda, email)</strong> per fornirti
-                    le informazioni richieste;
+                  <Trans>privacy-answer1-4</Trans>
                   </p>
                 </li>
                 <li>
                   <p>
-                    se hai scelto di partecipare alla community di Beta Test
-                    utilizzeremo la tua <strong>email</strong> per aggiornarti
-                    sugli sviluppi della piattaforma;
+                  <Trans>privacy-answer1-5</Trans>
                   </p>
                 </li>
                 <li>
                   <p>
-                    utilizziamo i <strong>cookie</strong>, ossia dei piccoli
-                    file di testo che il sito web inserisce nei dispositivi in
-                    uso, che siano computer o dispositivi mobili, salvati nelle
-                    directory utilizzate dal browser web dell’utente. Vi sono
-                    vari tipi di cookie, alcuni per rendere più efficace l’uso
-                    del sito, altri per abilitare determinate funzionalità. Per
-                    maggiori dettagli consulta la{" "}
-                    <a href="/cookies" target="_blank">
-                      Cookie Policy
-                    </a>{" "}
-                    del sito.
+                  <Trans>privacy-answer1-6</Trans>
                   </p>
                 </li>
               </ul>
