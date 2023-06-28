@@ -22,7 +22,7 @@ const CookiePolicy = () => (
       <Header />
       <main className="page">
         <div className="page--container container">
-          <h1 className="text-heading">Cookie policy</h1>
+          <h1 className="text-heading"><Trans>cookie</Trans></h1>
           <p>La presente Cookie Policy riguarda l’utilizzo dei cookie da parte del sito web apprendo.ai. Per la Privacy Policy del sito web può cliccare qui.</p>
           <br />
           <h2 className="text-notehead">1.	Chi è il Titolare del trattamento?</h2>

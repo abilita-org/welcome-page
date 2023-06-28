@@ -26,7 +26,7 @@ const Contact = () =>(
                 />
               </div>
               <div className="contacts--wrapper__content column">
-                <h1 className="text-title"><Trans>contacts</Trans></h1>
+                <h1 className="text-title"><Trans>contacts-title</Trans></h1>
                 <h2 className="text-heading">Apprendo S.r.l.</h2>
                 <ul>
                   <li>
