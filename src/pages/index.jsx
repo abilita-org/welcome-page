@@ -23,9 +23,9 @@ const data = {
   feartures: [
     {
       title:
-      t("title-1"),
+      "1",
       description:
-      t("text-1"),
+      "1",
       image: { src: brain, alt: "brain connected" },
     },
     {
