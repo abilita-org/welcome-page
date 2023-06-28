@@ -1,13 +1,15 @@
+import { graphql } from 'gatsby'
 import React from "react"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import {Trans} from 'gatsby-plugin-react-i18next';
 import SectionPartner from "../components/section_partner"
+
 
 import "../styles/style.scss"
 
-export default function Partners() {
-  return (
+const Partners = () =>  (
     <>
     <Seo />
       <Header />
@@ -16,10 +18,9 @@ export default function Partners() {
         <section className="partners">
           <div className="partners--container container">
             <div className="partners--content">
-              <h3 className="partners--title">NON CI FERMIAMO MAI</h3>
+              <h3 className="partners--title"><Trans>partners-title</Trans></h3>
               <p className="partners--description">
-                La nostra rete è in continua crescita: vogliamo portarti tutto
-                il meglio che c’è.
+              <Trans>partners-description</Trans>
               </p>
             </div>
           </div>
@@ -28,4 +29,19 @@ export default function Partners() {
       <Footer />
     </>
   )
-}
+
+  export default Partners;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
