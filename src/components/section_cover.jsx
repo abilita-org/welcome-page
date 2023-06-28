@@ -16,13 +16,10 @@ export default function SectionCover() {
             <img className="cover--logo" src={logo} alt="logo viblio" />
           </h1>
           <p className="cover--subtitle">
-            Sono una guida per il tuo percorso di apprendimento nell’universo
-            della conoscenza. Raccolgo e seleziono per te i contenuti delle
-            migliori piattaforme digitali al mondo, rendendoti il protagonista
-            della tua crescita.
+          <Trans>hello-header</Trans>
           </p>
           <p className="cover--subtitle">
-            Come? <br /> Seguimi e lo scoprirai.
+          <Trans>how</Trans> <br /> <Trans>find</Trans>
           </p>
           <a href="#features" target="_self">
             <img src={dart} alt="dart down" height="40px" />

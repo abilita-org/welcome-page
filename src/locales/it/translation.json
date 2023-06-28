@@ -1,6 +1,14 @@
 {
     "Hello, my name is": "Ciao, mi chiamo",
     "hello-header": "Sono una guida per il tuo percorso di apprendimento nell’universo della conoscenza. Raccolgo e seleziono per te i contenuti delle migliori piattaforme digitali al mondo, rendendoti il protagonista della tua crescita.",
+    "how":"Come?",
+    "find":"Seguimi e lo scoprirai.",
     "title-1":"DIMMI IL LAVORO CHE FAI: TI MOSTRERÒ QUELLO CHE C’È DA IMPARARE PER STARE AL PASSO DEI MIGLIORI",
-    "text-1": "Il mio database è in continuo aggiornamento e raccoglie le competenze chiave per più di 3000 ruoli: scegli quello che più ti si adatta e io selezionerò per te i migliori corsi e i migliori contenuti di apprendimento disponibili online."
+    "text-1": "Il mio database è in continuo aggiornamento e raccoglie le competenze chiave per più di 3000 ruoli: scegli quello che più ti si adatta e io selezionerò per te i migliori corsi e i migliori contenuti di apprendimento disponibili online.",
+    "title-2": "CONOSCIAMOCI MEGLIO, E POTRÒ SELEZIONARE I CONTENUTI PIÙ ADATTI A TE",
+    "text-2": "Rispondi alle domande della mia videointervista: grazie a un algoritmo di intelligenza artificiale validato da un team di esperti qualificati ti suggerirò i contenuti più adatti alle tue caratteristiche.",
+    "title-3": "SCEGLI QUELLO CHE PIÙ TI PIACE IN TOTALE LIBERTÀ",
+    "text-3": "Podcast, video, interi corsi e molto altro: cerca nella mia rete di contenuti e filtra i risultati per tipo, modalità e impegno necessario che preferisci.", 
+    "title-4": "CREA UN PERCORSO E SEGUI I TUOI PROGRESSI: TUTTO IN UN UNICO POSTO",
+    "text-4": "Nella tua pagina personale potrai creare delle collezioni con i tuoi contenuti preferiti e monitorare il tuo percorso di apprendimento."
   }

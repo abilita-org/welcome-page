@@ -1,6 +1,15 @@
 {
     "Hello, my name is": "Hello, my name is",
-    "hello-header": "I am a guide for your learning journey in the universe of knowledge. I gather and select the content from the best digital platforms in the world, making you the protagonist of your own growth.How? Follow me and you will find out.",
+    "hello-header": "I am a guide for your learning journey in the universe of knowledge. I gather and select the content from the best digital platforms in the world, making you the protagonist of your own growth.",
+    "how":"How?",
+    "find":"Follow me and you will find out.",
     "title-1":"TELL ME WHAT IS YOUR JOB, I'LL SHOW YOU WHAT TO LEARN TO KEEP UP",
-    "text-1": "My database is continuously updated and collects key skills for over 3000 roles: choose the one that suits you best and I will select the best courses and learning content available online for you."
+    "text-1": "My database is continuously updated and collects key skills for over 3000 roles: choose the one that suits you best and I will select the best courses and learning content available online for you.",
+    "title-2": "LET'S GET TO KNOW EACH OTHER AND I WOULD SELECT THE MOST SUITABLE CONTENT FOR YOU",
+    "text-2": "Answer the questions in my video interview: thanks to an artificial intelligence algorithm validated by a team of qualified experts, I will suggest the most suitable content based on your characteristics.",
+    "title-3": "CHOOSE WHAT YOU LIKE FREELY",
+    "text-3": "Podcasts, videos, courses and much more: search within my network of content and filter the results by type, mode, and level of commitment that you prefer.", 
+    "title-4": "CREATE YOUR LEARNING PATH, FIND EXPERTS SELECTION & TRACK YOUR SKILLS: ALL IN ONE PLACE",
+    "text-4": "In your personal page, you can create collections with your favorite content, track your learning journey, find suggestions and experts."
+
   }
