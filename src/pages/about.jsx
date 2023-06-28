@@ -1,13 +1,14 @@
+import { graphql } from 'gatsby'
 import React from "react"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import logo from "../images/logo-viblio.svg"
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 import "../styles/style.scss"
 
-export default function About() {
-  return (
+const About = () => (
     <>
       <Seo />
       <Header />
@@ -21,7 +22,7 @@ export default function About() {
                 alt="logo viblio"
               />
               <p className="cover--subtitle">
-                Qui a Viblio crediamo nella conoscenza.
+                <Trans>about-title</Trans>
                 <br />
                 <br />
                 Conoscere per aprirsi al futuro e alle sue possibilità
@@ -58,4 +59,19 @@ export default function About() {
       <Footer />
     </>
   )
-}
+
+  export default About;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
