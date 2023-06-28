@@ -25,32 +25,26 @@ const About = () => (
                 <Trans>about-title</Trans>
                 <br />
                 <br />
-                Conoscere per aprirsi al futuro e alle sue possibilità
+                <Trans>about-line1</Trans>
                 <br />
-                Conoscere per essere liberi, padroni del proprio destino
+                <Trans>about-line2</Trans>
                 <br />
-                Conoscere per abbattere le barriere e i pregiudizi
+                <Trans>about-line3</Trans>
                 <br />
-                Conoscere per diventare migliori
+                <Trans>about-line4</Trans>
               </p>
               <p className="cover--subtitle">
-                Abbiamo creato un luogo dove tutto questo è possibile, dove
-                apprendere non è soltanto un obiettivo personale o
-                professionale, ma è soprattutto un’esperienza di arricchimento
-                di sé.
+              <Trans>about-description</Trans>
               </p>
               <p className="cover--subtitle">
-                Speriamo che con il nostro strumento tu possa entusiasmarti per
-                quello che il mondo e la tecnologia di oggi rendono possibili, e
-                che tu possa iniziare un percorso ricco di significato e di
-                bellissime sorprese.
+              <Trans>about-description1</Trans>
               </p>
               <p className="cover--subtitle">
-                Buon viaggio!
+              <Trans>about-bye</Trans>
                 <br />
                 <br />
                 <br />
-                Il team di Viblio
+                <Trans>about-sign</Trans>
               </p>
             </div>
           </div>
