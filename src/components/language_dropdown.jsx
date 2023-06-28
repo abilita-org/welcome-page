@@ -6,12 +6,12 @@ import {Link, useI18next} from 'gatsby-plugin-react-i18next';
 
 
 const LanguageDropdown = () => {
-const {languages, originalPath} = useI18next();
+const {languages, originalPath, language} = useI18next();
 const labels = {"it":"italiano","en":"english"}
   return (
     <div className="language-dropdown">
       <button className="language-dropdown__button">
-        <span className="language-dropdown__label">{selectedLanguage}</span>
+        <span className="language-dropdown__label">{labels[language]}</span>
         <span className="language-dropdown__icon"></span>
       </button>
       <ul className="language-dropdown__menu">
