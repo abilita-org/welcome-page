@@ -78,199 +78,115 @@ const PrivacyPolicy = () => (
             </section>
             <section className="page--content">
               <h3 className="text-notehead">
-                3 - Per quali finalità trattiamo I dati personali e qual è la
-                base giuridica
+              <Trans>privacy-question2</Trans>
               </h3>
               <p>
-                Artt. 13-14 Regolamento UE 27 aprile 2016 n. 679 “Regolamento
-                Generale sulla Protezione dei Dati”
+              <Trans>privacy-answer2</Trans>
               </p>
               <ol type="a">
                 <li id="section-3-a">
                   <p>
-                    per il{" "}
-                    <strong>funzionamento dei sistemi informatici </strong>
-                    preposti alla gestione del Sito. Vengono trattati solo i
-                    dati di navigazione, cioè quelli per i quali la trasmissione
-                    al Sito è necessaria per il funzionamento dei sistemi
-                    informatici preposti alla gestione del Sito e dei protocolli
-                    di comunicazione di Interne
+                  <Trans>privacy-answer2-2</Trans>
                   </p>
                 </li>
                 <p>
                   <small>
-                    <strong>Base giuridica:</strong> la condizione che rende
-                    lecito il trattamento è l’interesse legittimo del Titolare
-                    alla gestione tecnica relativa alla funzionalità ed alla
-                    sicurezza del sito.
+                  <Trans>privacy-answer2-3</Trans>
                   </small>
                 </p>
                 <li id="section-3-b">
                   <p>
-                    per <strong>fornirti assistenza</strong> e per{" "}
-                    <strong>rispondere</strong> ai tuoi{" "}
-                    <strong>quesiti.</strong>
+                  <Trans>privacy-answer2-4</Trans>
                   </p>
                 </li>
                 <p>
                   <small>
-                    <strong>Base giuridica:</strong> La condizione che rende
-                    lecito il trattamento è costituita dall’esecuzione del
-                    contratto di cui sei parte.
+                  <Trans>privacy-answer2-5</Trans>
                   </small>
                 </p>
                 <li id="section-3-c">
                   <p>
-                    per{" "}
-                    <strong>
-                      aggiornarti sugli sviluppi della piattaforma
-                    </strong>{" "}
-                    qualora tu abbia deciso di partecipare alla community di
-                    Beta Test di Viblio (solo per privati).
+                  <Trans>privacy-answer2-6</Trans>
                   </p>
                 </li>
                 <p>
                   <small>
-                    <strong>Base giuridica:</strong> La condizione che rende
-                    lecito il trattamento è costituita dall’esecuzione del
-                    contratto di cui sei parte.
+                  <Trans>privacy-answer2-7</Trans>
                   </small>
                 </p>
                 <li id="section-3d">
                   <p>
-                    finalità necessarie ad accertare, esercitare o{" "}
-                    <strong>difendere un diritto in sede giudiziaria</strong> o
-                    legate al caso in cui le autorità giurisdizionali esercitino
-                    le loro funzioni.
+                  <Trans>privacy-answer2-8</Trans>
                   </p>
                 </li>
                 <p>
                   <small>
-                    <strong>Base giuridica:</strong> è interesse legittimo del
-                    Titolare all’esercizio o alla difesa di un diritto.
+                  <Trans>privacy-answer2-9</Trans>
                   </small>
                 </p>
               </ol>
             </section>
             <section className="page--content">
               <h3 className="text-notehead">
-                4 - La natura del conferimento dei dati e conseguenze
-                dell’eventuale rifiuto di rispondere
+              <Trans>privacy-question3</Trans>
               </h3>
               <p>
-                Relativamente ai punti <strong>3 a), 3 b) e 3 c)</strong> della
-                presente informativa, il conferimento dei dati è necessario per
-                adempiere gli obblighi legali e contrattuali. L’Utente è libero
-                di fornirli ma l’eventuale rifiuto a fornirli determinerà
-                l’impossibilità per Apprendo S.r.l. di gestire le tue richieste,
-                di navigare sul sito, di informarti sulle fasi di sviluppo per
-                partecipare alla versione beta test della piattaforma Viblio
-                (solo per gli utenti privati) o di svolgere correttamente tutti
-                gli adempimenti previsti dalle normative vigenti.
+              <Trans>privacy-answer3</Trans>
               </p>
             </section>
             <section className="page--content">
               <h3 className="text-notehead">
-                5 - Per quanto tempo conserviamo I dati?
+              <Trans>privacy-question4</Trans>
               </h3>
               <p>
-                Artt. 13-14 Regolamento UE 27 aprile 2016 n. 679 “Regolamento
-                Generale sulla Protezione dei Dati”
+              <Trans>privacy-answer4</Trans>
               </p>
               <p>
-                I dati saranno conservati per un periodo di tempo limitato
-                diverso a seconda del tipo di attività che prevede il
-                trattamento dei tuoi dati personali. Scaduto tale periodo, i
-                tuoi dati saranno definitivamente cancellati o comunque resi
-                anonimi in via irreversibile. I tuoi dati personali sono
-                conservati nel rispetto dei termini e criteri di seguito
-                specificati:
+              <Trans>privacy-answer4-2</Trans>
               </p>
               <ol type="a">
                 <li>
                   <p>
-                    dati relativi alla tua richiesta di assistenza vengono
-                    conservati sino al soddisfacimento della richiesta;
+                  <Trans>privacy-answer4-3</Trans>
                   </p>
                 </li>
                 <li>
                   <p>
-                    in relazione alla finalità sub 3 c) - dati utilizzati per
-                    partecipare al beta test della piattaforma Viblio - sono
-                    conservati sino al soddisfacimento della richiesta. Se non
-                    fossi più interessato a partecipare a tale iniziativa e non
-                    vuoi più ricevere le nostre comunicazioni puoi esercitare il
-                    tuo diritto di opposizione tramite il link “unsubscribe” che
-                    trovi nelle comunicazioni che di volta in volta ti inviamo.
+                  <Trans>privacy-answer4-4</Trans>
                   </p>
                 </li>
               </ol>
             </section>
             <section className="page--content">
               <h3 className="text-notehead">
-                6 - A chi potrebbero essere comunicati I tuoi dati personali?
+              <Trans>privacy-question5</Trans>
               </h3>
               <p>
-                I tuoi dati personali potranno essere trattati da personale del
-                Titolare, opportunamente formato e impegnato alla riservatezza,
-                o di soggetti terzi che forniscono servizi strumentali alla
-                Società, che agiscono tipicamente in qualità di responsabili del
-                trattamento, quali gestori di servizi di comunicazione, posta
-                elettronica, recapito della corrispondenza, servizi tecnici per
-                la gestione del Sito, fornitori di servizi informatici.
-                <br />
-                Tali soggetti riceveranno solo i dati necessari alle relative
-                funzioni e si impegneranno a usarli solo per le finalità sopra
-                indicate ed a trattarli nel rispetto della normativa privacy
-                applicabile. L’elenco aggiornato dei responsabili del
-                trattamento è disponibile presso le sedi del Titolare e verrà
-                fornito a richiesta dell’interessato scrivendo al seguente
-                indirizzo e-mail: <strong>info@viblio.com</strong>.
+              <Trans>privacy-answer5</Trans>
               </p>
             </section>
             <section className="page--content">
-              <h3 className="text-notehead">7 - Quali sono I suoi diritti?</h3>
+              <h3 className="text-notehead"><Trans>privacy-question6</Trans></h3>
               <p>
-                Ha il diritto di <strong>ottenere informazioni</strong> riguardo
-                il trattamento di dati personali che la riguardano, ottenerne
-                l’accesso e copia anche mediante mezzi elettronici di uso
-                comune.
+              <Trans>privacy-answer6</Trans>
               </p>
               <p>
-                Inoltre, ha diritto di ottenere{" "}
-                <strong>
-                  l'aggiornamento, l’integrazione o la rettificazione
-                </strong>{" "}
-                dei Suoi dati.
+              <Trans>privacy-answer6-2</Trans>
               </p>
               <p>
-                Può chiedere la <strong>portabilità</strong> dei dati trattati
-                in ragione dell’esecuzione di un contratto o sulla base del Suo
-                consenso.
+              <Trans>privacy-answer6-3</Trans>
               </p>
               <p>
-                Se ne ha interesse, ha il diritto di chiedere la{" "}
-                <strong>cancellazione</strong>
-                dei Suoi dati.
+              <Trans>privacy-answer6-4</Trans>
               </p>
               <p>
-                Ha infine il diritto di chiedere la <strong>limitazione</strong>{" "}
-                del trattamento o di <strong>opporsi</strong>, in tutto o in
-                parte, al trattamento dei dati personali che la riguardano,
-                anche per finalità di marketing.
+              <Trans>privacy-answer6-5</Trans>
               </p>
               <p>
-                Se crede che una o più attività di trattamento da noi realizzate
-                possano essere in violazione della normativa, o ritiene che non
-                siano stati tutelati i Suoi diritti, può inviare un reclamo
-                all’Autorità di Controllo del luogo in cui abitualmente risiede,
-                lavora o dove si è verificata la presunta violazione. In Italia
-                può rivolgersi all’Autorità Garante Privacy.
+              <Trans>privacy-answer6-6</Trans>
               </p>
               <p>
-                Tali diritti possono essere esercitati scrivendo a mezzo posta
-                ai recapiti sopra indicati oppure tramite posta elettronica al
-                seguente indirizzo e-mail: <strong>info@viblio.com</strong>.
+              <Trans>privacy-answer6-7</Trans>
               </p>
             </section>
           </div>
