@@ -22,5 +22,10 @@
     "client-register-des":"Leave your email, your role, and an area of interest here to request a free demo.",
     "client-business":"Are you already a business customer?",
     "client-business-des":"Access here, and I'll take you directly to your profile.",
-    "about-title":"At Viblio, we believe in knowledge."
+    "about":"who we are? ",
+    "about-title":"At Viblio, we believe in knowledge.",
+    "partners":"partners",
+    "contacts":"contacts",
+    "privacy":"Privacy policy",
+    "cookie":"Cookie policy"
   }

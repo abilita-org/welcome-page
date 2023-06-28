@@ -59,11 +59,7 @@ module.exports = {
         nsSeparator: false
       },
       pages: [
-        {
-          matchPath: '/:lang?',
-          getLanguageFromPath: true,
-          excludeLanguages: ['en']
-        },
+ 
       ]
       }
     

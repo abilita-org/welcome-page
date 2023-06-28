@@ -1,4 +1,5 @@
 import React from "react"
+import {Link, Trans} from 'gatsby-plugin-react-i18next';
 
 import logo from "../images/logo-viblio.svg"
 import linkedin from "../images/linkedin.svg"
@@ -7,13 +8,13 @@ import youtube from "../images/youtube.svg"
 
 const menus = [
   [
-    { page: "chi siamo", url: "/about" },
+    { page: "about", url: "/about" },
     { page: "partners", url: "/partners" },
-    { page: "contatti", url: "/contacts" },
+    { page: "contacts", url: "/contacts" },
   ],
   [
-    { page: "Privacy policy", url: "/privacy" },
-    { page: "Cookie policy", url: "/cookies" },
+    { page: "privacy", url: "/privacy" },
+    { page: "cookie", url: "/cookies" },
   ],
 ]
 
@@ -35,7 +36,7 @@ export default function Footer() {
               <ul>
                 {menu.map((link, i) => (
                   <li key={i}>
-                    <a href={link.url}>{link.page}</a>
+                    <Link to={link.url}><Trans>{link.page}</Trans></Link>
                   </li>
                 ))}
               </ul>
