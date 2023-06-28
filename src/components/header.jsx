@@ -4,7 +4,6 @@ import logo from "../images/logo-viblio.svg"
 import LanguageDropdown from "./language_dropdown";
 
 export default function Header() {
-  const {languages, originalPath} = useI18next();
   return (
     <header className="header">
       <div className="header--container container">
