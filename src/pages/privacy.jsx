@@ -43,12 +43,10 @@ const PrivacyPolicy = () => (
             </section>
             <section className="page--content">
               <h3 className="text-notehead">
-                2 - Che dati personali raccogliamo e trattiamo?
+              <Trans>privacy-question1</Trans>
               </h3>
               <p>
-                Le categorie di dati personali che Apprendo S.r.l. può
-                raccogliere durante la navigazione sul sito www.viblio.com sono
-                le seguenti:
+              <Trans>privacy-answer1</Trans>
               </p>
               <ul>
                 <li>

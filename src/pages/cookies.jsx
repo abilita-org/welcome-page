@@ -1,7 +1,9 @@
+import { graphql } from 'gatsby'
 import React from "react"
 import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 import "../styles/style.scss"
 
