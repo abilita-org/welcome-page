@@ -18,9 +18,9 @@ const PrivacyPolicy = () => (
             <small>
             <Trans>privacy-header</Trans>
               <br />
-              <Trans>privacy-header2</Trans>
+              <Trans>privacy-header-2</Trans>
               <br />
-              <Trans>privacy-header3</Trans>
+              <Trans>privacy-header-3</Trans>
             </small>
           </p>
           <div className="page--contents">

@@ -26,32 +26,28 @@ const Contact = () =>(
                 />
               </div>
               <div className="contacts--wrapper__content column">
-                <h1 className="text-title">Contatti</h1>
+                <h1 className="text-title"><Trans>contacts</Trans></h1>
                 <h2 className="text-heading">Apprendo S.r.l.</h2>
                 <ul>
                   <li>
-                    <label>Email</label>
-                    <span>info@viblio.com</span>
+                    <label></label>
+                    <span>P. IVA 03029040304</span>
                   </li>
                   <li>
-                    <label>Settore</label>
-                    <span>Digital Learning</span>
-                  </li>
-                  <li>
-                    <label>Sede principale</label>
+                    <label></label>
                     <span>Via J. Marinoni, 12 33100 Udine</span>
                   </li>
                   <li>
-                    <label>Sede secondaria</label>
-                    <span>Via Andrea Appiani 12, 20121 Milano (MI)</span>
+                    <label></label>
+                    <span>Numero di REA: UD-359725</span>
                   </li>
                   <li>
-                    <label>Tipo</label>
-                    <span>Società privata non quotata</span>
+                    <label></label>
+                    <span>Viblio - Copyright 2019-2023</span>
                   </li>
                   <li>
-                    <label>Data di fondazione</label>
-                    <span>2021</span>
+                  <label>Email</label>
+                    <span>info@viblio.com</span>
                   </li>
                 </ul>
               </div>
