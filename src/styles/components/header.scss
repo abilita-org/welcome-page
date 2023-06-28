@@ -29,4 +29,17 @@
   &--action {
     margin-left: auto;
   }
+  &--languages {
+    display:none;
+  }
+  &--languages-container{
+    &--languages {
+      display:none;
+    }
+    &:hover {
+      &--languages {
+        display:block;
+      }
+    }
+  }
 }

@@ -16,7 +16,10 @@ export default function Header() {
             height="80px"
           />
         </a>
-        <ul className="languages">
+        <div className="header--languages-container">
+          
+        <ul className="header--languages">
+        <span data-v-4295d220="" className="input-icon fas fa-globe"></span>
         {languages.map((lng) => (
           <li key={lng}>
             <Link to={originalPath} language={lng}>
@@ -25,6 +28,7 @@ export default function Header() {
           </li>
         ))}
       </ul>
+      </div>
         <div className="header--action">
           <Button style="primary" text="login" size="small" action="login"/>
         </div>

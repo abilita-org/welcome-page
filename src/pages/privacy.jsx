@@ -16,11 +16,11 @@ const PrivacyPolicy = () => (
           <h1 className="text-heading">Privacy policy</h1>
           <p className="text-light">
             <small>
-              Artt. 13-14 Regolamento UE 27 aprile
+            <Trans>privacy-header</Trans>
               <br />
-              2016 n. 679 “Regolamento Generale
+              <Trans>privacy-header2</Trans>
               <br />
-              sulla Protezione dei Dati”
+              <Trans>privacy-header3</Trans>
             </small>
           </p>
           <div className="page--contents">
