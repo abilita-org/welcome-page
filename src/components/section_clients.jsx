@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Button from "./button"
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 import industry from "../images/industry.svg"
 import consumer from "../images/consumer.svg"
@@ -26,11 +27,10 @@ export default function SectionClients() {
         <div className="clients--columns columns">
           <div className="column clients--intro">
             <h3 className="clients--title">
-              SEI INTERESSATO? <br /> PARLIAMONE.
+              <Trans>client-interested</Trans> <br /> <Trans>client-talk</Trans>
             </h3>
             <p className="clients--decription">
-              Che tu sia un privato o un’azienda, contatta il mio team di
-              esperti e avvia una conversazione: non te ne pentirai.
+            <Trans>client-description</Trans>
             </p>
           </div>
           <div className="clients--cards columns">

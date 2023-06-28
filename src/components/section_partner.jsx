@@ -1,4 +1,5 @@
 import React from "react"
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 import harvard from "../images/logo-harvard.svg"
 import edx from "../images/logo-edx.svg"
@@ -15,12 +16,10 @@ export default function SectionPartner() {
       <div className="partners--container container">
         <div className="partners--content">
           <h2 className="partners--title">
-            UN UNIVERSO DI CONOSCENZA A TUA COMPLETA DISPOSIZIONE
+            <Trans>partner-title</Trans>
           </h2>
           <p className="partners--description">
-            Collaboro con i migliori provider di conoscenza, espandendo di
-            continuo la mia rete per selezionarti il meglio dell’offerta
-            mondiale.
+          <Trans>partner-description</Trans>
           </p>
         </div>
         <div className="partners--grid">

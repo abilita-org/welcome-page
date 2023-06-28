@@ -2,10 +2,10 @@ import React from "react"
 import logo from "../images/logo-viblio.svg"
 import dart from "../images/dart-down.svg"
 
-import {Trans,useTranslation} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 export default function SectionCover() {
-  const {t} = useTranslation() 
+
   return (
     <section id="cover" className="cover">
       <div className="cover--container container">

@@ -22,56 +22,56 @@ const data = {
   feartures: [
     {
       title:
-      "1",
+        "1",
       description:
-      "1",
+        "1",
       image: { src: brain, alt: "brain connected" },
     },
     {
       title:
-        "conosciamoci meglio, e potrò selezionare i contenuti più adatti a te",
+        "2",
       description:
-        "Rispondi alle domande della mia videointervista: grazie a un algoritmo di intelligenza artificiale validato da un team di esperti qualificati ti suggerirò i contenuti più adatti alle tue caratteristiche.",
+        "2",
       image: { src: face, alt: "face detection" },
     },
     {
-      title: "scegli quello che più ti piace in totale libertà",
+      title: "3",
       description:
-        "Podcast, video, interi corsi e molto altro: cerca nella mia rete di contenuti e filtra i risultati per tipo, modalità e impegno necessario che preferisci.",
+        "3",
       image: { src: book, alt: "book opened" },
     },
     {
       title:
-        "crea un percorso e segui i tuoi progressi: tutto in un unico posto",
+        "4",
       description:
-        "Nella tua pagina personale potrai creare delle collezioni con i tuoi contenuti preferiti e monitorare il tuo percorso di apprendimento.",
+        "4",
       image: { src: run, alt: "run between mountains" },
     },
   ],
 }
 
 const IndexPage = () => (
-    <>
-      <Seo />
-      <Header />
-      <main>
-        <SectionCover />
-        <div id="features">
-          {data.feartures.map((feature, i) => (
-            <SectionFeature
-              key={i}
-              data={feature}
-              id={i + 1}
-              inverse={(i + 1) % 2 == 0}
-            />
-          ))}
-        </div>
-        <SectionPartner />
-        <SectionClients />
-      </main>
-      <Footer />
-    </>
-  );
+  <>
+    <Seo />
+    <Header />
+    <main>
+      <SectionCover />
+      <div id="features">
+        {data.feartures.map((feature, i) => (
+          <SectionFeature
+            key={i}
+            data={feature}
+            id={i + 1}
+            inverse={(i + 1) % 2 == 0}
+          />
+        ))}
+      </div>
+      <SectionPartner />
+      <SectionClients />
+    </main>
+    <Footer />
+  </>
+);
 
 export default IndexPage;
 
