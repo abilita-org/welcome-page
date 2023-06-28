@@ -1,8 +1,7 @@
 import React from "react"
-import {useTranslation} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 export default function SectionFeature({ id, inverse, data }) {
-  const {t} = useTranslation();
   const { title, description, image } = data
   return (
     <section id={`feature_${id}`} className="feature">
@@ -15,8 +14,8 @@ export default function SectionFeature({ id, inverse, data }) {
           <p>
             <span className="feature--number">{id}</span>
           </p>
-          <h3 className="feature--title">{t("title-"+title)}</h3>
-          <p className="feature--description">{t("text-"+description)}</p>
+          <h3 className="feature--title"><Trans>title-{title}</Trans></h3>
+          <p className="feature--description"><Trans>text-{description}</Trans></p>
         </div>
         <div className="column feature--media">
           <img
