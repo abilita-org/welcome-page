@@ -39,15 +39,14 @@ export default function SectionClients() {
               <br />
               <Button
                 style="secondary"
-                text="richiedi info"
+                text="client-info"
                 size="large"
                 action="modal"
                 target="contact"
                 fireAction={e => showModal(e)}
               />
               <p>
-                Scrivi ai miei learning experts, capiranno con te le necessità
-                della tua azienda.
+                <Trans>client-info-des</Trans>
               </p>
             </div>
             <div className="clients--card">
@@ -55,24 +54,23 @@ export default function SectionClients() {
               <br />
               <Button
                 style="secondary"
-                text="iscriviti"
+                text="client-register"
                 size="large"
                 action="modal"
                 target="consumer"
                 fireAction={e => showModal(e)}
               />
               <p>
-                Lascia qui la tua email, il tuo ruolo ed un argomento
-                d’interesse per richiedere una demo gratuita.
+              <Trans>client-register-des</Trans>
               </p>
             </div>
           </div>
         </div>
         <div className="clients--columns columns">
           <div className="column clients--intro">
-            <h3 className="clients--title">SEI GIÀ UN CLIENTE BUSINESS?</h3>
+            <h3 className="clients--title"><Trans>client-business</Trans></h3>
             <p className="clients--decription">
-              Accedi qui, ti porterò direttamente al tuo profilo.
+            <Trans>client-business-des</Trans>
             </p>
           </div>
           <div className="clients--cards">
