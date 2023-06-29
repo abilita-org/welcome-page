@@ -125,16 +125,16 @@ const CookiePolicy = () => (
                   <tr>
                     <th>ugid</th>
                     <th>Unsplash.com</th>
-                    <th>Utilizzato per l’implementazione di contenuti video sul sito web.</th>
-                    <th>1 anno</th>
+                    <th><Trans>cookie-answer-3-2-tr-2</Trans></th>
+                    <th><Trans>cookie-answer-3-2-tr-3</Trans></th>
                   </tr>
                 </tbody>
               </table>
               <h3 className="text-notehead">
-                Cookie di terze parti
+              <Trans>cookie-answer-3-title-3</Trans>
               </h3>
               <p>
-                Questi cookie vengono installati da soggetti terzi rispetto al titolare del trattamento per tracciare l’attività dell’utente nel sito web e possono essere impostati solo dopo che quest’ultimo ha dato il suo consenso.
+              <Trans>cookie-answer-3-3</Trans>
               </p>
               <table>
                 <thead>
@@ -149,38 +149,38 @@ const CookiePolicy = () => (
                   <tr>
                     <th>__insp_sid</th>
                     <th>Inspectlet</th>
-                    <th>Sessione</th>
-                    <th rowSpan="6">Utilizzati per analizzare il comportamento dell’utente e per raccogliere informazioni al fine di migliorare l’esperienza dell’utente.</th>
+                    <th><Trans>cookie-answer-3-3-tr-2</Trans></th>
+                    <th rowSpan="6"><Trans>cookie-answer-3-3-tr-3</Trans></th>
                   </tr>
                   <tr>
                     <th>__insp_ref</th>
                     <th>Inspectlet</th>
-                    <th>Sessione</th>
+                    <th><Trans>cookie-answer-3-3-tr-2</Trans></th>
                   </tr>
                   <tr>
                     <th>__insp_scpt</th>
                     <th>Inspectlet</th>
-                    <th>Sessione</th>
+                    <th><Trans>cookie-answer-3-3-tr-2</Trans></th>
                   </tr>
                   <tr>
                     <th>__insp_nv</th>
                     <th>Inspectlet</th>
-                    <th>Sessione</th>
+                    <th><Trans>cookie-answer-3-3-tr-2</Trans></th>
                   </tr>
                   <tr>
                     <th>__insp_wid</th>
                     <th>Inspectlet</th>
-                    <th>Sessione</th>
+                    <th><Trans>cookie-answer-3-3-tr-2</Trans></th>
                   </tr>
                   <tr>
                     <th>__insp_uid</th>
                     <th>Inspectlet</th>
-                    <th>Sessione</th>
+                    <th><Trans>cookie-answer-3-3-tr-2</Trans></th>
                   </tr>
                 </tbody>
               </table>
               <h3 className="text-notehead">
-                Cookie non classificati
+              <Trans>cookie-answer-3-title-4</Trans>
               </h3>
               <table>
                 <thead>
@@ -195,20 +195,20 @@ const CookiePolicy = () => (
                   <tr>
                     <th>loglevel:webpach-dev-server</th>
                     <th>apprendo.ai</th>
-                    <th>Non classificato</th>
-                    <th>Persistente</th>
+                    <th><Trans>cookie-answer-3-4-tr-2</Trans></th>
+                    <th><Trans>cookie-answer-3-4-tr-3</Trans></th>
                   </tr>
                 </tbody>
               </table>
             </section>
             <section className="page--content">
               <h2 className="text-notehead">
-                5. Modifiche o aggiornamenti alla presente cookie policy
+              <Trans>cookie-question-4</Trans>
               </h2>
               <p>
-                Il titolare del trattamento si riserva il diritto di apportare modifiche alla presente cookie policy in qualunque momento dandone pubblicità agli Utenti su questa pagina. Si prega dunque di consultare frequentemente questa pagina, prendendo come riferimento la data dell’ultimo aggiornamento indicata qui di seguito.
+              <Trans>cookie-answer-4</Trans>
               </p>
-              <p><strong>Ultimo aggiornamento 22.09.2022</strong></p>
+              <p><strong><Trans>cookie-update</Trans></strong></p>
             </section>
           </div>
         </div>

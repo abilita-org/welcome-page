@@ -107,5 +107,17 @@
     "cookie-answer-3-tr-2":"Used for website login function.",
     "cookie-answer-3-tr-3":"1 day",
     "cookie-answer-3-title-2":"Statistical Cookies",
-    "cookie-answer-3-2":"These cookies are installed by third parties other than the data controller. Cookies (such as Google Analytics) are used to collect information, in aggregated or non-aggregated form, about the number of users and how the website is used (number of pages visited, pages accessed, etc.) in order to generate statistical analysis on user navigation patterns."
+    "cookie-answer-3-2":"These cookies are installed by third parties other than the data controller. Cookies (such as Google Analytics) are used to collect information, in aggregated or non-aggregated form, about the number of users and how the website is used (number of pages visited, pages accessed, etc.) in order to generate statistical analysis on user navigation patterns.",
+    "cookie-answer-3-2-tr-2":"Used for the implementation of video content on the website.",
+    "cookie-answer-3-2-tr-3":"1 year",
+    "cookie-answer-3-title-3":"Third-Party Cookies ",
+    "cookie-answer-3-3":"These cookies are installed by third parties other than the data controller to track the user's activity on the website and can only be set after the user has given their consent.",
+    "cookie-answer-3-3-tr-2":"Session",
+    "cookie-answer-3-3-tr-3":"Used to analyze user behavior and to collect information in order to improve the user experience",
+    "cookie-answer-3-title-4":"Unclassified cookies",
+    "cookie-answer-3-4-tr-2":"Unclassified",
+    "cookie-answer-3-4-tr-3":"Persistent",
+    "cookie-question-4":"5. Changes or Updates to this Cookie Policy ",
+    "cookie-answer-4":"The data controller reserves the right to make changes to this cookie policy at any time by giving notice to users on this page. Therefore, please check this page frequently, referring to the date of the last update indicated below.",
+    "cookie-update": "Last updated: September 22, 2022."
   }
