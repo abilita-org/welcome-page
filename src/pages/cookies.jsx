@@ -79,46 +79,46 @@ const CookiePolicy = () => (
             </section>
             <section className="page--content">
               <h2 className="text-notehead">
-                4. Quali cookie utilizziamo nel nostro sito?
+              <Trans>cookie-question-3</Trans>
               </h2>
               <h3 className="text-notehead">
-                Cookie tecnici
+              <Trans>cookie-answer-3-title-1</Trans>
               </h3>
               <p>
-                I cookie tecnici sono quelli che il Titolare utilizza al solo fine di consentire all'utente la normale navigazione e fruizione del sito web e una migliore esperienza del servizio offerto. Possono essere suddivisi in cookie di navigazione (garantiscono la normale navigazione e fruizione del Sito) e cookie funzionali (permettono all'utente la navigazione in funzione di una serie di criteri selezionati come la lingua o il paese di provenienza) al fine di migliorare il servizio reso sul Sito. Sul presente sito vengono utilizzati cookie tecnici per memorizzare la decisione dell’Utente sull’utilizzo dei cookie sul sito web.
+              <Trans>cookie-answer-3</Trans>
               </p>
               <table>
                 <thead>
                   <tr>
-                    <th width="20%">NOME COOKIE</th>
-                    <th width="20%">FORNITORE</th>
-                    <th width="40%">FUNZIONE</th>
-                    <th width="20%">SCADENZA</th>
+                    <th width="20%"><Trans>cookie-answer-3-th</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-1</Trans></th>
+                    <th width="40%"><Trans>cookie-answer-3-th-2</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-3</Trans></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th>KEYCLOAK_3P_COOKIE_SAMESITE</th>
                     <th>Auth.viblio.com</th>
-                    <th>Utilizzato per la funzione di accesso al sito web.</th>
-                    <th>1 giorno</th>
+                    <th><Trans>cookie-answer-3-tr-2</Trans></th>
+                    <th><Trans>cookie-answer-3-tr-3</Trans></th>
                   </tr>
                 </tbody>
               </table>
 
               <h3 className="text-notehead">
-                Cookie statistici
+              <Trans>cookie-answer-3-title-2</Trans>
               </h3>
               <p>
-                Questi cookie vengono installati da soggetti terzi rispetto al titolare del trattamento. I cookie (ad es. Google Analitycs) vengono utilizzati per raccogliere informazioni, in forma aggregata o non aggregata, relative al numero di utenti e su come venga utilizzato il sito web (numero di pagine visitate, pagine accedute, ecc.) al fine di elaborare analisi statistiche sulle modalità di navigazione degli utenti.
+              <Trans>cookie-answer-3-2</Trans>
               </p>
               <table>
                 <thead>
                   <tr>
-                    <th width="20%">NOME COOKIE</th>
-                    <th width="20%">FORNITORE</th>
-                    <th width="40%">FUNZIONE</th>
-                    <th width="20%">SCADENZA</th>
+                  <th width="20%"><Trans>cookie-answer-3-th</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-1</Trans></th>
+                    <th width="40%"><Trans>cookie-answer-3-th-2</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-3</Trans></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -139,10 +139,10 @@ const CookiePolicy = () => (
               <table>
                 <thead>
                   <tr>
-                    <th width="20%">NOME COOKIE</th>
-                    <th width="20%">FORNITORE</th>
-                    <th width="20%">SCADENZA</th>
-                    <th width="40%">FUNZIONE</th>
+                  <th width="20%"><Trans>cookie-answer-3-th</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-1</Trans></th>
+                    <th width="40%"><Trans>cookie-answer-3-th-2</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-3</Trans></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -185,10 +185,10 @@ const CookiePolicy = () => (
               <table>
                 <thead>
                   <tr>
-                    <th width="20%">NOME COOKIE</th>
-                    <th width="20%">FORNITORE</th>
-                    <th width="40%">FUNZIONE</th>
-                    <th width="20%">SCADENZA</th>
+                  <th width="20%"><Trans>cookie-answer-3-th</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-1</Trans></th>
+                    <th width="40%"><Trans>cookie-answer-3-th-2</Trans></th>
+                    <th width="20%"><Trans>cookie-answer-3-th-3</Trans></th>
                   </tr>
                 </thead>
                 <tbody>

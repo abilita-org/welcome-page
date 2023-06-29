@@ -96,5 +96,16 @@
     "cookie-answer-1-9":"Certain operations may not be possible without the use of cookies, which are technically necessary for the proper functioning of the website. Other types of cookies and similar technologies (such as Facebook pixels) may be used to track user navigation and profile interests and habits for displaying targeted advertisements. For further information about the types of cookies and how they work, you can visit the following websites:",
     "cookie-question-2":"3. How to change cookie settings?",
     "cookie-answer-2":"Our website may use technical, statistical, marketing, and profiling cookies. Users can choose to delete or block certain (or all) cookies through the appropriate banner on the website or by configuring their browser. The procedure for configuring cookies is different for each browser. Below are the links to instructions for the most popular browsers:",
-    "cookie-answer-2-2":"Please note that disabling cookies completely in your browser may prevent you from using all interactive features."
+    "cookie-answer-2-2":"Please note that disabling cookies completely in your browser may prevent you from using all interactive features.",
+    "cookie-question-3":"4. Which cookies do we use on our website?",
+    "cookie-answer-3-title-1":"Technical Cookies",
+    "cookie-answer-3":"Technical cookies are used by the Data Controller solely for the purpose of enabling users to navigate and use the website normally, as well as to improve the overall service experience. They can be divided into navigation cookies (which ensure the normal browsing and use of the website) and functional cookies (which allow users to browse based on selected criteria such as language or country of origin) in order to enhance the service provided on the website. On this website, technical cookies are used to store the user's decision regarding the use of cookies on the website.",
+    "cookie-answer-3-th":"Cookie name",
+    "cookie-answer-3-th-1":"Supplier",
+    "cookie-answer-3-th-2":"Function",
+    "cookie-answer-3-th-3":"Deadline",
+    "cookie-answer-3-tr-2":"Used for website login function.",
+    "cookie-answer-3-tr-3":"1 day",
+    "cookie-answer-3-title-2":"Statistical Cookies",
+    "cookie-answer-3-2":"These cookies are installed by third parties other than the data controller. Cookies (such as Google Analytics) are used to collect information, in aggregated or non-aggregated form, about the number of users and how the website is used (number of pages visited, pages accessed, etc.) in order to generate statistical analysis on user navigation patterns."
   }
