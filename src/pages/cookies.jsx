@@ -57,17 +57,15 @@ const CookiePolicy = () => (
                   <li><a>https://www.garanteprivacy.it/temi/cookie;</a></li>
                 </ul>
 
-                L’elenco completo dei cookies presenti sul sito web <a>apprendo.ai</a> è inserito nella tabella riportata in calce alla presente informativa.
+                <Trans>cookie-answer-1-10</Trans> <a>apprendo.ai</a> <Trans>cookie-answer-1-11</Trans>
               </p>
 
             </section>
             <section className="page--content">
               <h2 className="text-notehead">
-                3. Come modificare le impostazioni relative ai cookie?
+              <Trans>cookie-question-2</Trans>
               </h2>
-              Il nostro sito web può utilizzare cookies tecnici, statistici e di marketing e profilazione.
-              L’utente può scegliere se cancellare, o bloccare, taluni (o tutti) i cookie attraverso l’apposito banner presente sul sito o tramite la configurazione del proprio browser. La procedura di configurazione dei cookies è diversa per ciascun browser, di seguito riportiamo il link alle istruzioni dei browser più diffusi:
-
+              <Trans>cookie-answer-2</Trans>
               <ul>
                 <li><a href="https://support.google.com/chrome/answer/95647">Google Chrome</a></li>
                 <li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop">Mozilla Firefox</a></li>
@@ -77,7 +75,7 @@ const CookiePolicy = () => (
                 <li><a href="https://support.apple.com/it-it/HT201265">Apple Safari</a></li>
               </ul>
 
-              Ricordiamo inoltre, che disabilitando completamente i cookie nel browser, l’utente potrebbe non essere in grado di utilizzare tutte le funzionalità interattive.
+              <Trans>cookie-answer-2-2</Trans>
             </section>
             <section className="page--content">
               <h2 className="text-notehead">
