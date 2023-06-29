@@ -23,40 +23,34 @@ const CookiePolicy = () => (
       <main className="page">
         <div className="page--container container">
           <h1 className="text-heading"><Trans>cookie</Trans></h1>
-          <p>La presente Cookie Policy riguarda l’utilizzo dei cookie da parte del sito web apprendo.ai. Per la Privacy Policy del sito web può cliccare qui.</p>
+          <p><Trans>cookie-description</Trans></p>
           <br />
-          <h2 className="text-notehead">1.	Chi è il Titolare del trattamento?</h2>
+          <h2 className="text-notehead"><Trans>cookie-question</Trans></h2>
           <p>
 
-            Il titolare del trattamento è la società APPRENDO S.r.l. con sede in 33100 Udine, via Marinoni n. 12 (P.I. 03029040304).
-            Il Titolare è contattabile all’indirizzo email{" "}
-            <strong>support@apprendo.ai</strong>
+          <Trans>cookie-answer</Trans>
           </p>
           <div className="page--contents">
             <section className="page--content">
               <h2 className="text-notehead">
-                2.	Che cos’è un cookie?
+              <Trans>cookie-question-1</Trans>
               </h2>
               <p>
-                Un cookie è un piccolo file che viene inviato e registrato nel dispositivo dell’utente (PC/smartphone/tablet),
-                quando accede al nostro sito internet, per essere poi ritrasmesso al nostro sito alla successiva visita.
-                I cookie vengono utilizzati per diverse finalità, ad esempio:
+              <Trans>cookie-answer-1</Trans>
                 <ul>
-                  <li>ricordare le azioni e preferenze dell’utente (come, ad esempio, i dati di login, la lingua prescelta, le dimensioni dei caratteri, ecc.) affinché non debba essere ripetuta la scelta di tale preferenza quando l’utente visita nuovamente il sito o naviga da una pagina all’altra dello stesso.</li>
-                  <li>eseguire autenticazioni informatiche, monitoraggio di sessioni e memorizzazione di informazioni riguardanti le attività degli utenti che accedono ad un sito, </li>
-                  <li>tenere traccia della navigazione dell’utente all’interno del sito stesso per finalità statistiche o pubblicitarie attraverso un codice identificativo unico contenuto nel cookie.</li>
+                  <li><Trans>cookie-answer-1-2</Trans></li>
+                  <li><Trans>cookie-answer-1-3</Trans> </li>
+                  <li><Trans>cookie-answer-1-4</Trans></li>
                 </ul>
 
-                È possibile fornire una tassonomia dei cookie in base ad alcune caratteristiche:
+                <Trans>cookie-answer-1-5</Trans>
 
                 <ul>
-                  <li>CICLO DI VITA: di sessione se scadono alla chiusura del browser, o permanenti se restano fino al decorrere di un termine, anche di anni;</li>
-                  <li>UTILIZZO / FINALITÀ: tecnici (necessari, talvolta indispensabili, per una completa – o migliore – fruizione del sito), analitici (utilizzati per elaborare analisi statistiche sulle modalità di navigazione degli utenti e raccolgono informazioni anonime sull’utilizzo del sito web (ad es. Google Analitycs) o di marketing e profilazione (finalizzati a creare un profilo dell’utente, per poi inviargli messaggi pubblicitari in linea con le preferenze manifestate dallo stesso nel corso della precedente navigazione);</li>
-                  <li>PROVENIENZA: di prima parte (si tratta di cookie istallati direttamente dal titolare attraverso il sito web) o di terze parti (si tratta di cookie istallati da un sito o da un webserver diverso dal nostro sito che l’utente sta visitando).</li>
+                  <li><Trans>cookie-answer-1-6</Trans></li>
+                  <li><Trans>cookie-answer-1-7</Trans></li>
+                  <li><Trans>cookie-answer-1-8</Trans></li>
                 </ul>
-                Alcune operazioni non potrebbero essere compiute senza l’uso dei cookie, che in certi casi sono quindi tecnicamente necessari per lo stesso funzionamento del sito. Altre tipologie di cookie e tecnologie analoghe (come ad esempio il pixel di Facebook) possono essere invece usate per tracciare la navigazione degli utenti e profilare interessi e abitudini, per visualizzare annunci pubblicitari mirati.
-
-                Per ulteriori informazioni sui tipi di cookie e sul loro funzionamento è possibile consultare i seguenti siti:
+                <Trans>cookie-answer-1-9</Trans>
                 <ul>
                   <li><a>www.youronlinechoices.com</a></li>
                   <li><a>http://www.allaboutcookies.org</a></li>
