@@ -16,11 +16,16 @@
     }
   
     &__icon {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border: solid #333;
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
+    }
+    &__globe {
+      width: 10px;
+      height: 10px;
+      filter: invert(14%) sepia(16%) saturate(10%) hue-rotate(321deg) brightness(107%) contrast(87%);
     }
   
     &__menu {
@@ -42,6 +47,10 @@
   
       li {
         padding: 8px 16px;
+      }
+      a{
+        text-decoration: none;
+        color:#333;
       }
     }
   
