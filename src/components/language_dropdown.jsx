@@ -11,7 +11,7 @@ const labels = {"it":"Italiano","en":"English"}
   return (
     <div className="language-dropdown">
       <button className="language-dropdown__button">
-        <span className="language-dropdown__label"><img src="globe.svg" class="language-dropdown__globe"/>{labels[language]}</span>
+        <span className="language-dropdown__label"><img src={globe} class="language-dropdown__globe"/>{labels[language]}</span>
         <span className="language-dropdown__icon"></span>
       </button>
       <ul className="language-dropdown__menu">
