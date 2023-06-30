@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Link, useI18next} from 'gatsby-plugin-react-i18next';
-import globe from '../images/globe.svg'
+import globe from '../images/globe.png'
 
 
 
