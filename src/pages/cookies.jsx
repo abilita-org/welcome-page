@@ -57,7 +57,7 @@ const CookiePolicy = () => (
                   <li><a>https://www.garanteprivacy.it/temi/cookie;</a></li>
                 </ul>
 
-                <Trans>cookie-answer-1-10</Trans> <a>apprendo.ai</a> <Trans>cookie-answer-1-11</Trans>
+                <Trans>cookie-answer-1-10</Trans> <a>viblio.com</a> <Trans>cookie-answer-1-11</Trans>
               </p>
 
             </section>

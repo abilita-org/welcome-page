@@ -2,7 +2,7 @@ import React from "react"
 import {Trans} from 'gatsby-plugin-react-i18next';
 
 const loginLink =
-  "https://auth.viblio.com/realms/viblioprod/protocol/openid-connect/auth?client_id=www-prod&redirect_uri=https%3A%2F%2Fwww.apprendo.ai%2F&response_mode=fragment&response_type=code&scope=openid"
+  "https://auth.viblio.com/realms/viblioprod/protocol/openid-connect/auth?client_id=www-prod&redirect_uri=https%3A%2F%2Fapp.viblio.com%2F&response_mode=fragment&response_type=code&scope=openid"
 
 export default function Button({
   target,
